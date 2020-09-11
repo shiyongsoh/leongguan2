@@ -1,0 +1,34 @@
+@import 'animate.css';
+@import 'jquery.bxslider.css';
+
+.loader{
+  position: relative;
+  height: 200px;
+}
+.loader img{
+  position: absolute;
+  left: 50%;
+}
+.bx-viewport {
+  box-shadow: none !important;
+  border: none !important;
+}
+ul.bxslider {
+    margin: 0px !important;
+}
+.bx-wrapper .bx-viewport {
+  left: 0 !important;
+}
+.bx-slider {
+  margin: 0px;
+} 
+.layer-container{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+*{
+    box-sizing: border-box;
+}
