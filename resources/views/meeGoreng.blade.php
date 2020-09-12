@@ -17,7 +17,7 @@
                         <thead>
                             <th scope="col">Prep Time</th>
                             <th scope="col">Cook Time</th>
-                            <th scope="col">Total TIme</th>
+                            <th scope="col">Total Time</th>
                         </thead>
                         <tr>
                             <td>15min</td>

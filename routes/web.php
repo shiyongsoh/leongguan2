@@ -3,8 +3,9 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
-
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\purchaseController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,14 +36,28 @@ Route::get('/food/hokkienmee', function () {
 Route::get('/food/hokkienmeefriednoodle', function () {
     return view('hokkienFriedNoodle');
 });
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return Inertia\Inertia::render('Dashboard');
-// })->name('dashboard');
 
+
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    //     return Inertia\Inertia::render('Dashboard');
+    // })->name('dashboard');
+    
+Route::get('/addProduct', [AdminController::class,'addProductPage']);
+Route::post('/addProduct', [AdminController::class,'addProduct']);
 Route::get('/dashboard', [HomeController::class, 'index']);
 Route::get('/kiosk/{id}', [HomeController::class, 'kiosk']);
+Route::get('/redeem', [HomeController::class, 'redeem']);
 Route::get('/food/{id}', [HomeController::class, 'kiosk']);
 Route::get('admin', [AdminController::class, 'listFood']);
+Route::post('buy', [purchaseController::class, 'purchase']);
+Route::get('finalise', [purchaseController::class, 'pay']);
 
 
 Route::post('/admin', [AdminController::class, 'insertFood']);
+
+//test
+Route::get('/fire', function () {
+    event(new \App\Events\puchaseMade());
+    return 'hmm';
+});

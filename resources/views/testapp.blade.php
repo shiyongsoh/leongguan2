@@ -10,12 +10,12 @@
       Create Account – LG Foods
     </title>
 
-    <link rel="stylesheet" href="{{ asset('css/common-store.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/theme.scss.css') }}">
+    
 
     <link rel="canonical" href="https://leongguan.com/account/register">
 
     
+      <link rel="shortcut icon" href="https://cdn.shopify.com/s/files/1/0054/9568/5193/files/leong-guan-logo_32x32.png?v=1542361831" type="image/png">
     
 
     
@@ -39,12 +39,406 @@
 <meta name="twitter:card" content="summary">
 
 
+    <div id="powrIframeLoader">­<style> .powrLoaded iframe { visibility: hidden; } </style></div><script type="text/javascript" async="" src="./Create Account – LG Foods_files/slider.js.download"></script><script type="text/javascript" async="" src="./Create Account – LG Foods_files/powr.js.download"></script><script type="text/javascript" async="" src="./Create Account – LG Foods_files/skeletopapp.js.download"></script><script type="text/javascript" async="" src="./Create Account – LG Foods_files/powr.js.download"></script><script type="text/javascript" async="" src="./Create Account – LG Foods_files/powr.js.download"></script><script type="text/javascript" async="" src="./Create Account – LG Foods_files/powr.js.download"></script><script type="text/javascript" async="" src="./Create Account – LG Foods_files/trekkie.storefront.min.js.download"></script><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/5495685193/digital_wallets/dialog">
+<meta name="shopify-checkout-api-token" content="aa300a7ba1b22c133f2c7de8c981805e">
 <meta id="in-context-paypal-metadata" data-shop-id="5495685193" data-venmo-supported="false" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="SGD">
 <link rel="alternate" hreflang="x-default" href="https://leongguan.com/account/register">
 <link rel="alternate" hreflang="en" href="https://leongguan.com/account/register">
 <link rel="alternate" hreflang="zh-CN" href="https://leongguan.com/zh-cn/account/register">
+<link href="https://monorail-edge.shopifysvc.com/" rel="dns-prefetch">
+<script id="apple-pay-shop-capabilities" type="application/json">{"shopId":5495685193,"countryCode":"SG","currencyCode":"SGD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/5495685193","merchantName":"LG Foods","requiredBillingContactFields":["postalAddress","email","phone"],"requiredShippingContactFields":["postalAddress","email","phone"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex"],"total":{"type":"pending","label":"LG Foods","amount":"1.00"}}</script>
+<script id="shopify-features" type="application/json">{"accessToken":"aa300a7ba1b22c133f2c7de8c981805e","betas":["rich-media-storefront-analytics"],"domain":"leongguan.com","predictiveSearch":true,"shopId":5495685193,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js","locale":"en"}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "leong-guan-food-manufacturer-pte-ltd.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = {"active":"SGD","rate":"1.0"};
+Shopify.theme = {"name":"Kagami","id":43152441417,"theme_store_id":747,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "cdn.shopify.com";</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script>window.ShopifyPay = window.ShopifyPay || {};
+window.ShopifyPay.apiHost = "pay.shopify.com";</script>
+<script>(function() {
+  function asyncLoad() {
+    var urls = ["\/\/www.powr.io\/powr.js?powr-token=leong-guan-food-manufacturer-pte-ltd.myshopify.com\u0026external-type=shopify\u0026shop=leong-guan-food-manufacturer-pte-ltd.myshopify.com","\/\/www.powr.io\/powr.js?powr-token=leong-guan-food-manufacturer-pte-ltd.myshopify.com\u0026external-type=shopify\u0026shop=leong-guan-food-manufacturer-pte-ltd.myshopify.com","\/\/www.powr.io\/powr.js?powr-token=leong-guan-food-manufacturer-pte-ltd.myshopify.com\u0026external-type=shopify\u0026shop=leong-guan-food-manufacturer-pte-ltd.myshopify.com","https:\/\/formbuilder.hulkapps.com\/skeletopapp.js?shop=leong-guan-food-manufacturer-pte-ltd.myshopify.com","\/\/www.powr.io\/powr.js?powr-token=leong-guan-food-manufacturer-pte-ltd.myshopify.com\u0026external-type=shopify\u0026shop=leong-guan-food-manufacturer-pte-ltd.myshopify.com","https:\/\/sliderapp.hulkapps.com\/assets\/js\/slider.js?shop=leong-guan-food-manufacturer-pte-ltd.myshopify.com"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":5495685193,"offset":28800,"reqid":"888376da-5272-458d-8616-b9ae43505e12","pageurl":"leongguan.com\/account\/register","u":"1919b982c50b"};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script>window['GoogleAnalyticsObject'] = 'ga';
+window['ga'] = window['ga'] || function() {
+  (window['ga'].q = window['ga'].q || []).push(arguments);
+};
+window['ga'].l = 1 * new Date();</script>
+<script>var _gaUTrackerOptions = {'allowLinker': true};ga('create', 'UA-153523960-1', 'auto', _gaUTrackerOptions);ga('send', 'pageview');
+      (function(){
+        ga('require', 'linker');
+        function addListener(element, type, callback) {
+          if (element.addEventListener) {
+            element.addEventListener(type, callback);
+          }
+          else if (element.attachEvent) {
+            element.attachEvent('on' + type, callback);
+          }
+        }
+        function decorate(event) {
+          event = event || window.event;
+          var target = event.target || event.srcElement;
+          if (target && (target.action || target.href)) {
+            ga(function (tracker) {
+              var linkerParam = tracker.get('linkerParam');
+              document.cookie = '_shopify_ga=' + linkerParam + '; ' + 'path=/';
+            });
+          }
+        }
+        addListener(window, 'load', function(){
+          for (var i=0; i<document.forms.length; i++) {
+            if(document.forms[i].action && document.forms[i].action.indexOf('/cart') >= 0) {
+              addListener(document.forms[i], 'submit', decorate);
+            }
+          }
+          for (var i=0; i<document.links.length; i++) {
+            if(document.links[i].href && document.links[i].href.indexOf('/checkout') >= 0) {
+              addListener(document.links[i], 'click', decorate);
+            }
+          }
+        })
+      }());
+    </script>
+<script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+window.ShopifyAnalytics.meta.currency = 'SGD';
+var meta = {"page":{}};
+for (var attr in meta) {
+  window.ShopifyAnalytics.meta[attr] = meta[attr];
+}</script>
+<script>window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
+  
+};
+</script>
+<script class="analytics">(function () {
+  var customDocumentWrite = function(content) {
+    var jquery = null;
 
+    if (window.jQuery) {
+      jquery = window.jQuery;
+    } else if (window.Checkout && window.Checkout.$) {
+      jquery = window.Checkout.$;
+    }
 
+    if (jquery) {
+      jquery('body').append(content);
+    }
+  };
+
+  var isDuplicatedThankYouPageView = function() {
+    return document.cookie.indexOf('loggedConversion=' + window.location.pathname) !== -1;
+  }
+
+  var setCookieIfThankYouPage = function() {
+    if (window.location.pathname.indexOf('/checkouts') !== -1 &&
+        window.location.pathname.indexOf('/thank_you') !== -1) {
+
+      var twoMonthsFromNow = new Date(Date.now());
+      twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+      document.cookie = 'loggedConversion=' + window.location.pathname + '; expires=' + twoMonthsFromNow;
+    }
+  }
+
+  var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+  if (trekkie.integrations) {
+    return;
+  }
+  trekkie.methods = [
+    'identify',
+    'page',
+    'ready',
+    'track',
+    'trackForm',
+    'trackLink'
+  ];
+  trekkie.factory = function(method) {
+    return function() {
+      var args = Array.prototype.slice.call(arguments);
+      args.unshift(method);
+      trekkie.push(args);
+      return trekkie;
+    };
+  };
+  for (var i = 0; i < trekkie.methods.length; i++) {
+    var key = trekkie.methods[i];
+    trekkie[key] = trekkie.factory(key);
+  }
+  trekkie.load = function(config) {
+    trekkie.config = config;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.onerror = function(e) {
+      (new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';
+    };
+    script.async = true;
+    script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2020.07.13.1';
+    var first = document.getElementsByTagName('script')[0];
+    first.parentNode.insertBefore(script, first);
+  };
+  trekkie.load(
+    {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":5495685193,"isMerchantRequest":null,"themeId":43152441417,"themeCityHash":"10302243745634098403","contentLanguage":"en","currency":"SGD"},"isServerSideCookieWritingEnabled":true,"isPixelGateEnabled":false},"Performance":{"navigationTimingApiMeasurementsEnabled":true,"navigationTimingApiMeasurementsSampleRate":1},"Session Attribution":{}}
+  );
+
+  var loaded = false;
+  trekkie.ready(function() {
+    if (loaded) return;
+    loaded = true;
+
+    window.ShopifyAnalytics.lib = window.trekkie;
+    
+
+    var originalDocumentWrite = document.write;
+    document.write = customDocumentWrite;
+    try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+    document.write = originalDocumentWrite;
+      (function () {
+        if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
+          return;
+        }
+        window.BOOMR = window.BOOMR || {};
+        window.BOOMR.snippetStart = new Date().getTime();
+        window.BOOMR.snippetExecuted = true;
+        window.BOOMR.snippetVersion = 12;
+        window.BOOMR.application = "core";
+        window.BOOMR.shopId = 5495685193;
+        window.BOOMR.themeId = 43152441417;
+        window.BOOMR.themeName = "Kagami";
+        window.BOOMR.themeVersion = "6.1.2";
+        window.BOOMR.url =
+          "https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js";
+        var where = document.currentScript || document.getElementsByTagName("script")[0];
+        var parentNode = where.parentNode;
+        var promoted = false;
+        var LOADER_TIMEOUT = 3000;
+        function promote() {
+          if (promoted) {
+            return;
+          }
+          var script = document.createElement("script");
+          script.id = "boomr-scr-as";
+          script.src = window.BOOMR.url;
+          script.async = true;
+          parentNode.appendChild(script);
+          promoted = true;
+        }
+        function iframeLoader(wasFallback) {
+          promoted = true;
+          var dom, bootstrap, iframe, iframeStyle;
+          var doc = document;
+          var win = window;
+          window.BOOMR.snippetMethod = wasFallback ? "if" : "i";
+          bootstrap = function(parent, scriptId) {
+            var script = doc.createElement("script");
+            script.id = scriptId || "boomr-if-as";
+            script.src = window.BOOMR.url;
+            BOOMR_lstart = new Date().getTime();
+            parent = parent || doc.body;
+            parent.appendChild(script);
+          };
+          if (!window.addEventListener && window.attachEvent && navigator.userAgent.match(/MSIE [67]./)) {
+            window.BOOMR.snippetMethod = "s";
+            bootstrap(parentNode, "boomr-async");
+            return;
+          }
+          iframe = document.createElement("IFRAME");
+          iframe.src = "about:blank";
+          iframe.title = "";
+          iframe.role = "presentation";
+          iframe.loading = "eager";
+          iframeStyle = (iframe.frameElement || iframe).style;
+          iframeStyle.width = 0;
+          iframeStyle.height = 0;
+          iframeStyle.border = 0;
+          iframeStyle.display = "none";
+          parentNode.appendChild(iframe);
+          try {
+            win = iframe.contentWindow;
+            doc = win.document.open();
+          } catch (e) {
+            dom = document.domain;
+            iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
+            win = iframe.contentWindow;
+            doc = win.document.open();
+          }
+          if (dom) {
+            doc._boomrl = function() {
+              this.domain = dom;
+              bootstrap();
+            };
+            doc.write("<body onload='document._boomrl();'>");
+          } else {
+            win._boomrl = function() {
+              bootstrap();
+            };
+            if (win.addEventListener) {
+              win.addEventListener("load", win._boomrl, false);
+            } else if (win.attachEvent) {
+              win.attachEvent("onload", win._boomrl);
+            }
+          }
+          doc.close();
+        }
+        var link = document.createElement("link");
+        if (link.relList &&
+          typeof link.relList.supports === "function" &&
+          link.relList.supports("preload") &&
+          ("as" in link)) {
+          window.BOOMR.snippetMethod = "p";
+          link.href = window.BOOMR.url;
+          link.rel = "preload";
+          link.as = "script";
+          link.addEventListener("load", promote);
+          link.addEventListener("error", function() {
+            iframeLoader(true);
+          });
+          setTimeout(function() {
+            if (!promoted) {
+              iframeLoader(true);
+            }
+          }, LOADER_TIMEOUT);
+          BOOMR_lstart = new Date().getTime();
+          parentNode.appendChild(link);
+        } else {
+          iframeLoader(false);
+        }
+        function boomerangSaveLoadTime(e) {
+          window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+        }
+        if (window.addEventListener) {
+          window.addEventListener("load", boomerangSaveLoadTime, false);
+        } else if (window.attachEvent) {
+          window.attachEvent("onload", boomerangSaveLoadTime);
+        }
+        if (document.addEventListener) {
+          document.addEventListener("onBoomerangLoaded", function(e) {
+            e.detail.BOOMR.init({
+              producer_url: "https://monorail-edge.shopifysvc.com/v1/produce",
+              ResourceTiming: {
+                enabled: true,
+                trackedResourceTypes: ["script", "img", "css"]
+              },
+            });
+            e.detail.BOOMR.t_end = new Date().getTime();
+          });
+        } else if (document.attachEvent) {
+          document.attachEvent("onpropertychange", function(e) {
+            if (!e) e=event;
+            if (e.propertyName === "onBoomerangLoaded") {
+              e.detail.BOOMR.init({
+                producer_url: "https://monorail-edge.shopifysvc.com/v1/produce",
+                ResourceTiming: {
+                  enabled: true,
+                  trackedResourceTypes: ["script", "img", "css"]
+                },
+              });
+              e.detail.BOOMR.t_end = new Date().getTime();
+            }
+          });
+        }
+      })();
+    
+
+    if (!isDuplicatedThankYouPageView()) {
+      setCookieIfThankYouPage();
+      
+        window.ShopifyAnalytics.lib.page(
+          null,
+          {}
+        );
+      
+      
+    }
+  });
+
+  
+      var eventsListenerScript = document.createElement('script');
+      eventsListenerScript.async = true;
+      eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-2632023fb2795bd6668b6fbae05b661baba07afb3d62048f023763eca3cd96e3.js";
+      document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+    
+})();</script><script async="" src="./Create Account – LG Foods_files/shop_events_listener-2632023fb2795bd6668b6fbae05b661baba07afb3d62048f023763eca3cd96e3.js.download"></script>
+<script>var storefrontFormsRecaptchaCallback = function() {
+  grecaptcha.execute("6LcCR2cUAAAAANS1Gpq_mDIJ2pQuJphsSQaUEuc9", { action: "contact_form" }).then(function(token) {
+    var forms = document.querySelectorAll('form[action^="/contact"]');
+
+    forms.forEach(function(form) {
+      var contact_form_flag = form.querySelector('input[name="form_type"][value="contact"]');
+
+      if(contact_form_flag === null) {
+        return;
+      }
+
+      var tokenInput = form.querySelector('input[name=recaptcha-v3-token]');
+      if (tokenInput instanceof HTMLElement) {
+        tokenInput.setAttribute("value", token);
+      }
+      else {
+        tokenInput = document.createElement("input");
+        tokenInput.setAttribute("name", "recaptcha-v3-token");
+        tokenInput.setAttribute("type", "hidden");
+        tokenInput.setAttribute("value", token);
+        form.appendChild(tokenInput, form);
+      }
+    });
+  });
+};</script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+  // Look for a contact form
+  var form = document.querySelector('form[action^="/contact"] input[name="form_type"][value="contact"]');
+  if (form === null) {
+    return;
+  }
+
+  // If found, inject reCAPTCHA V3
+  var recaptchaV3Script = document.createElement("script");
+  recaptchaV3Script.setAttribute("src", "https://www.recaptcha.net/recaptcha/api.js?onload=storefrontFormsRecaptchaCallback&render=6LcCR2cUAAAAANS1Gpq_mDIJ2pQuJphsSQaUEuc9&hl=en");
+
+  document.body.appendChild(recaptchaV3Script);
+
+  return;
+});</script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+  // Look for reCAPTCHA disclaimer
+  var spam_detection_disclaimer = document.querySelector('p[data-spam-detection-disclaimer]');
+
+  if (spam_detection_disclaimer === null) {
+    return;
+  }
+
+  var styleElement = document.createElement("style");
+
+  document.head.appendChild(styleElement);
+
+  // If found, hide the banner
+  var styleSheet = styleElement.sheet;
+  styleSheet.insertRule(".grecaptcha-badge { visibility: hidden; }");
+});</script>
+<script integrity="sha256-/yz3KdTbvYyCjvClJ1EuENpgCyPfKK73b0tRgu969Zs=" crossorigin="anonymous" data-source-attribution="shopify.loadfeatures" defer="defer" src="./Create Account – LG Foods_files/load_feature-ff2cf729d4dbbd8c828ef0a527512e10da600b23df28aef76f4b5182ef7af59b.js.download"></script>
+<script crossorigin="anonymous" defer="defer" src="./Create Account – LG Foods_files/storefront-21b5dddfc8b64c1ad68cee3ba7448d1ffa15c24e969ebc1fbccf1a3784b659ad.js.download"></script>
+<script integrity="sha256-h+g5mYiIAULyxidxudjy/2wpCz/3Rd1CbrDf4NudHa4=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="./Create Account – LG Foods_files/features-87e8399988880142f2c62771b9d8f2ff6c290b3ff745dd426eb0dfe0db9d1dae.js.download" crossorigin="anonymous"></script>
+<script async="async" src="./Create Account – LG Foods_files/analytics.js.download"></script>
 <script defer="defer" src="./Create Account – LG Foods_files/ga_urchin_forms-99e991855b3d8ddc69e625c68ab0579dd9927b611c2ec4943d396c72e3af0849.js.download"></script>
 
 
@@ -59,47 +453,19 @@
     min-height: 180px;
   }
 }
-</style>
+</style><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
 
     <script src="./Create Account – LG Foods_files/lazysizes.min.js.download" async=""></script>
     <link href="./Create Account – LG Foods_files/theme.scss.css" rel="stylesheet" type="text/css" media="all">
 
-    <script>
-      // This allows to expose several variables to the global scope, to be used in scripts
-      window.shop = {
-        template: "customers\/register",
-        currentPage: 1,
-        shopCurrency: "SGD",
-        collectionSortBy: null
-      };
-
-      window.languages = {
-        autocompleteNoResults: "No results",
-        autocompleteSeeAll: "See all results",
-        closeReview: "Close",
-        passwordRecoverTitle: "Recover your password",
-        shippingEstimatorSubmitting: "Estimating...",
-        shippingEstimatorSubmit: "Estimate",
-        shippingEstimatorError: "There are some errors:",
-        shippingEstimatorRates: "Available shipping rates:",
-        shippingEstimatorNoRates: "We do not ship to this destination",
-        cartEstimatedShipping: "+ Estimated shipping:",
-        addToCartLabel: "Add to cart",
-        soldOutLabel: "Sold out",
-        onSaleLabel: "On sale",
-        unavailableLabel: "Unavailable",
-        addToCartButton: "Add to cart",
-        addingToCartButton: "Adding...",
-        addedToCartButton: "Added!"
-      }
-    </script>
+    
 
     
   <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo.png?height=628&amp;pad_color=ffffff&amp;v=1563865730&amp;width=1200">
 <meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo.png?height=628&amp;pad_color=ffffff&amp;v=1563865730&amp;width=1200">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="628">
-<link href="./Create Account – LG Foods_files/shopify-boomerang-1.0.0.min.js.download" rel="preload" as="script"><link href="./Create Account – LG Foods_files/common-store.css" rel="stylesheet"></head>
+<link href="./Create Account – LG Foods_files/shopify-boomerang-1.0.0.min.js.download" rel="preload" as="script"><script id="boomr-scr-as" src="./Create Account – LG Foods_files/shopify-boomerang-1.0.0.min.js.download" async=""></script><script src="./Create Account – LG Foods_files/wow.js.download"></script><script src="./Create Account – LG Foods_files/jquery.bxslider.js.download"></script><script src="./Create Account – LG Foods_files/jquery.easing.1.3.js.download"></script><script src="./Create Account – LG Foods_files/common-store.js.download"></script><link href="./Create Account – LG Foods_files/common-store.css" rel="stylesheet"></head>
 
   
 
@@ -952,7 +1318,6 @@
     
   </use>
 </svg>
-
         </a>
       </div>
 
@@ -965,7 +1330,6 @@
               <img class="header__logo-image" src="./Create Account – LG Foods_files/LG_Logo_60x.png" srcset="//cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo_60x.png?v=1563865730 1x, //cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo_60x@2x.png?v=1563865730 2x" alt="LG Foods">
             
           </a>
-
         </div>
       </div>
 
@@ -1111,7 +1475,7 @@
       <nav class="navigation-horizontal" role="navigation">
         
 
-      <h1 style="font-weight:bold;color:red">This is reverse engineered website, DO NOT key in your TRUE credentials until you stop seeing this warning!</h1>
+
 
 <ul class="navigation-horizontal__list">
   
@@ -1588,10 +1952,44 @@
   </div>
 </header>
 
+<div class="page__content">
+  <section class="register-form">
+    <div class="container container--shrink">
+      <form method="post" action="https://leongguan.com/account" id="create_customer" accept-charset="UTF-8" class="form--shrinked"><input type="hidden" name="form_type" value="create_customer"><input type="hidden" name="utf8" value="✓">
+        
 
-@yield('content')
-{{ $slot ?? '' }}
+        <div class="form__control ">
+          <label class="form__label" for="customer__first-name">First name</label>
+          <input type="text" id="customer__first-name" name="customer[first_name]">
+        </div>
 
+        <div class="form__control ">
+          <label class="form__label" for="customer__last-name">Last name</label>
+          <input type="text" id="customer__last-name" name="customer[last_name]">
+        </div>
+
+        <div class="form__control ">
+          <label class="form__label" for="customer__email">Email</label>
+          <input type="email" id="customer__email" name="customer[email]" required="required">
+        </div>
+
+        <div class="form__control ">
+          <label class="form__label" for="customer__password">Password</label>
+          <input type="password" id="customer__password" name="customer[password]" required="required">
+        </div>
+
+        <div class="button-wrapper">
+          <button type="submit" class="button button--primary">Create my account</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<footer class="page__footer">
+  <h4 class="page__footer-text">Already have an account?</h4>
+  <a href="https://leongguan.com/account/login" class="button button--secondary">Login now</a>
+</footer>
       </main>
 
       <div id="shopify-section-newsletter" class="shopify-section shopify-section__newsletter">
@@ -1730,11 +2128,14 @@
     
     
 
-    <script src="{{asset('jquery.easing.1.3.js.download')}}" type="text/javascript"></script>
+    <script src="./Create Account – LG Foods_files/jquery.min.js.download" type="text/javascript"></script>
     <script src="./Create Account – LG Foods_files/modernizr.min.js.download" type="text/javascript"></script>
 
     
 
+    
+      <script src="./Create Account – LG Foods_files/shopify_common-8ea6ac3faf357236a97f5de749df4da6e8436ca107bc3a4ee805cbf08bc47392.js.download" type="text/javascript"></script>
+      <script src="./Create Account – LG Foods_files/customer_area-4beccea87758d91106a581ba89341d9b51842f6da79209258c8297239e950343.js.download" type="text/javascript"></script>
     
 
     

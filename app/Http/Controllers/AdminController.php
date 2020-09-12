@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Auth;
 use App\Models\food;
+use App\Models\products;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -47,5 +48,28 @@ class AdminController extends Controller
         dd($imageName);
         // $food->save();
         return view('admin')->with('food',$food);
+    }
+    public function addProduct(Request $request){
+        $role = Auth::User();
+        if($role->role !== "admin"){
+            return redirect('dashboard');
+        }
+
+        $addProduct = new products();
+        if($request->name == null|| $request->price ==null){
+            return view('addProduct')->with('error',"Key in something");
+        }
+        else if(!is_numeric($request->input('price'))){
+            return view('addProduct')->with('error',"must be a number");
+        }
+        // dd($request);
+        $addProduct->productName = $request->input('name');
+        $addProduct->price = $request->input('price');
+        $addProduct->save();
+
+        return view('productList');
+    }
+    public function addProductPage(){
+        return view('addProduct');
     }
 }

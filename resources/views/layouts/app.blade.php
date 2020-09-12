@@ -14,9 +14,9 @@
     Create Account – LG Foods
   </title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ asset('css/common-store.css') }}">
   <link rel="stylesheet" href="{{ asset('css/theme.scss.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="canonical" href="https://leongguan.com/account/register">
 
@@ -38,6 +38,7 @@
 
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
   <meta name="twitter:card" content="summary">
@@ -66,8 +67,6 @@
     }
   </style>
 
-  <script src="./Create Account – LG Foods_files/lazysizes.min.js.download" async=""></script>
-  <link href="./Create Account – LG Foods_files/theme.scss.css" rel="stylesheet" type="text/css" media="all">
 
   <script>
     // This allows to expose several variables to the global scope, to be used in scripts
@@ -104,8 +103,7 @@
   <meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo.png?height=628&amp;pad_color=ffffff&amp;v=1563865730&amp;width=1200">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="628">
-  <link href="./Create Account – LG Foods_files/shopify-boomerang-1.0.0.min.js.download" rel="preload" as="script">
-  <link href="./Create Account – LG Foods_files/common-store.css" rel="stylesheet">
+  <link href="{{asset('js/shopify-boomerang-1.0.0.min.js.download')}}" rel="preload" as="script">
 </head>
 
 
@@ -232,7 +230,6 @@
     </defs>
   </svg>
 
-  <div class="page__overlay" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></div>
 
   <div class="drawers">
     <div class="mini-cart">
@@ -276,661 +273,7 @@
         </div>
       </section>
     </div>
-    <nav class="navigation-sidebar" role="navigation">
 
-
-      <header class="navigation-sidebar__header">
-        <div class="navigation-sidebar__top" style="height: 70.6px;">
-          <a href="https://leongguan.com/account/register#" class="navigation-sidebar__close" data-action="close-navigation-sidebar">
-            <svg class="icon icon-close-thin">
-              <use xlink:href="#icon-close-thin">
-
-              </use>
-            </svg>
-          </a>
-
-          <a href="https://leongguan.com/account/register#" data-action="rewind-navigation-sidebar">
-            <svg class="icon icon-arrow-left">
-              <use xlink:href="#icon-arrow-left">
-
-              </use>
-            </svg>
-          </a>
-
-          <span class="navigation-sidebar__current">
-            <span class="navigation-sidebar__current-title"></span>
-          </span>
-        </div>
-
-
-
-        <div class="navigation-sidebar__search--mobile">
-          <svg class="icon icon-search">
-            <use xlink:href="#icon-search">
-
-            </use>
-          </svg>
-
-          <form class="navigation-sidebar__search-form" action="https://leongguan.com/search" method="GET" role="search">
-            <input type="hidden" name="type" value="product">
-            <input type="search" name="q" class="search__input" autocomplete="off" autocorrect="off" aria-label="Search..." placeholder="Search..." value="">
-          </form>
-        </div>
-      </header>
-
-
-
-
-      <div class="navigation-sidebar__lists">
-
-
-        <ul class="navigation-sidebar__list navigation-sidebar__list--active" tabindex="-1" data-nav-for="level-0" data-nav-name="Main Menu">
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Home</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/blogs/cooking-tips" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Cooking Tips</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/collections/wholegrain-noodle" class="navigation-sidebar__link" data-open-nav="level-1-2" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">Retail Products</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/collections/all" class="navigation-sidebar__link" data-open-nav="level-1-3" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">Foodservice Products</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/collections" class="navigation-sidebar__link" data-open-nav="level-1-4" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">Shop</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/pages/about-us" class="navigation-sidebar__link" data-open-nav="level-1-5" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">About</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/blogs/news" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Blog</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/pages/contact-us" class="navigation-sidebar__link" data-open-nav="level-1-7" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">Contact</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/pages/about-us" class="navigation-sidebar__link" data-open-nav="level-1-8" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">Language 语言</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-
-
-
-
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/account/login" class="navigation-sidebar__link">Login</a>
-          </li>
-
-
-        </ul>
-
-
-
-
-
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-1-1" data-nav-name="Cooking Tips" data-parent-nav="level-0">
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/pages/cooking-tips-fresh-pasta" class="navigation-sidebar__link" data-open-nav="level-2-1-0" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">Fresh Pasta</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/pages/cooking-tips-fresh-noodles" class="navigation-sidebar__link" data-open-nav="level-2-1-1" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">Noodles</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/pages/cooking-tips-beancurd-products" class="navigation-sidebar__link" data-open-nav="level-2-1-2" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">Bean Products</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-wanton-dumpling-skin" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Dumpling/Wanton Skin</span>
-
-            </a>
-          </li>
-
-        </ul>
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-1-2" data-nav-name="Retail Products" data-parent-nav="level-0">
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/pasta" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Fresh Pasta</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/wholegrain-noodle" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Wholegrain Products</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/noodle" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Noodles</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/skins" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Wanton Wrappers</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/lg-beancurd" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Bean Curd Products</span>
-
-            </a>
-          </li>
-
-        </ul>
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-1-3" data-nav-name="Foodservice Products" data-parent-nav="level-0">
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/tofu" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Bean Curd Products</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/frozen" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Frozen</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/fishballs-and-fishcakes" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Fishball &amp; Fishcakes</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/healthier-choice" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Healthier Choice Products</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://leongguan.com/collections" class="navigation-sidebar__link" data-open-nav="level-2-3-4" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">Noodles</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/pasta" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Pasta</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/vegetarian-1" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Vegetarian</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/wanton-dumpling-wrappers" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Wanton/Dumpling Wrappers</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/collections/other-products" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Other Products</span>
-
-            </a>
-          </li>
-
-        </ul>
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-1-4" data-nav-name="Shop" data-parent-nav="level-0">
-
-          <li class="navigation-sidebar__item navigation-sidebar__item--expandable">
-            <a href="https://shopee.sg/lgfoods" class="navigation-sidebar__link" data-open-nav="level-2-4-0" aria-haspopup="true">
-              <span class="navigation-sidebar__link-title">Shop Online</span>
-              <svg class="icon icon-arrow-right">
-                <use xlink:href="#icon-arrow-right">
-
-                </use>
-              </svg>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/pages/retail" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Retail Locations</span>
-
-            </a>
-          </li>
-
-        </ul>
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-1-5" data-nav-name="About" data-parent-nav="level-0">
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/pages/about-us" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Our Company</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/pages/vision-mission" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Our Mission</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/pages/csr" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">CSR</span>
-
-            </a>
-          </li>
-
-        </ul>
-
-
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-1-7" data-nav-name="Contact" data-parent-nav="level-0">
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/pages/contact-us" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Contact</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/pages/order-enquiry" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Enquiry</span>
-
-            </a>
-          </li>
-
-        </ul>
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-1-8" data-nav-name="Language 语言" data-parent-nav="level-0">
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">English</span>
-
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item ">
-            <a href="https://leongguan.com/zh-CN" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">中文</span>
-
-            </a>
-          </li>
-
-        </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-2-1-0" data-nav-name="Fresh Pasta" data-parent-nav="level-1-1">
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-fresh-fettuccine" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Fettuccine</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-fresh-spaghetti" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Spaghetti</span>
-            </a>
-          </li>
-
-        </ul>
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-2-1-1" data-nav-name="Noodles" data-parent-nav="level-1-1">
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-yellow-noodles" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Yellow Noodles</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-kway-teow" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Kway Teow</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-for-mee-tai-bak" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Mee Tai Bak</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-ipoh-hor-fun" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Ipoh Hor Fun</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-hor-fun" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Hor Fun</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-wanton-mee-kia" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Wanton Mee Kia/Mee Pok</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-dan-dan-mee-kia" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Dan Dan Mee Kia</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-thick-vermicelli" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Thick Vermicelli</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-rice-vermicelli" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Rice Vermicelli</span>
-            </a>
-          </li>
-
-        </ul>
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-2-1-2" data-nav-name="Bean Products" data-parent-nav="level-1-1">
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/golden-tofu" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Golden Tofu</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/pressed-tofu" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Pressed Tofu</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/silken-tofu" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Silken Tofu</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/blogs/cooking-tips/taukwa" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Taukwa</span>
-            </a>
-          </li>
-
-        </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-2-3-4" data-nav-name="Noodles" data-parent-nav="level-1-3">
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/collections/cooked-noodles" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Cooked Noodles</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/collections/dry-noodles" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Dry Noodles</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://leongguan.com/collections/uncooked-noodles" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Uncooked Noodles</span>
-            </a>
-          </li>
-
-        </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <ul class="navigation-sidebar__list" tabindex="-1" data-nav-for="level-2-4-0" data-nav-name="Shop Online" data-parent-nav="level-1-4">
-
-          <li class="navigation-sidebar__item">
-            <a href="https://shopee.sg/lgfoods" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Shopee</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://coldstorage.com.sg/leong-guan" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Cold Storage</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://giant.sg/leong-guan" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">Giant Online</span>
-            </a>
-          </li>
-
-          <li class="navigation-sidebar__item">
-            <a href="https://www.fairprice.com.sg/category/lg-foods" class="navigation-sidebar__link">
-              <span class="navigation-sidebar__link-title">FairPrice On</span>
-            </a>
-          </li>
-
-        </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-    </nav>
   </div>
 
   <div id="shopify-section-popup" class="shopify-section">
@@ -950,614 +293,128 @@
 
     </div>
     <div id="shopify-section-header" class="shopify-section shopify-section__header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img class="header__logo-image" src="./Create Account – LG Foods_files/LG_Logo_60x.png" srcset="//cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo_60x.png?v=1563865730 1x, //cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo_60x@2x.png?v=1563865730 2x" alt="LG Foods">
+          <!-- social media links -->
 
+        </a>
+        <a href="#" class="navbar-toggler " data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="icon icon-hamburger">
+            <use xlink:href="#icon-hamburger">
 
-      <header class="header header--with-horizontal-nav" role="banner">
-        <div class="header__wrapper">
-          <div class="header__item header__item-toggle" id="navbarSupportedContent">
-            <a href="#" class="header__link">
-              <svg class="icon icon-hamburger">
-                <use xlink:href="#icon-hamburger">
-
-                </use>
-              </svg>
-
-            </a>
-          </div>
-
-          <div class="header__item header__item-logo">
-            <div class="header__logo">
-              <a href="https://leongguan.com/" class="header__link">
-
-
-
-                <img class="header__logo-image" src="./Create Account – LG Foods_files/LG_Logo_60x.png" srcset="//cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo_60x.png?v=1563865730 1x, //cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo_60x@2x.png?v=1563865730 2x" alt="LG Foods">
-
+            </use>
+          </svg>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cooking Tips
               </a>
-
-            </div>
-          </div>
-
-
-
-
-
-          <div class="header__item header__item-social">
-
-
-
-
-            <ul class="social-media social-media--inline">
-
-
-              <li class="social-media__item">
-                <a href="https://www.facebook.com/leong.guan.food" target="_blank"><svg class="icon icon-facebook">
-                    <use xlink:href="#icon-facebook">
-
-                      <title>Facebook</title>
-
-                    </use>
-                  </svg></a>
-              </li>
-
-
-
-
-
-
-
-
-
-              <li class="social-media__item">
-                <a href="https://www.youtube.com/channel/UCVleaphU5GsdQotnpFbPz_w" target="_blank"><svg class="icon icon-youtube">
-                    <use xlink:href="#icon-youtube">
-
-                      <title>YouTube</title>
-
-                    </use>
-                  </svg></a>
-              </li>
-
-
-
-
-
-
-
-
-
-
-            </ul>
-
-
-          </div>
-
-
-
-
-
-
-          <div class="header__item header__item-account">
-            <a href="https://leongguan.com/account/login" class="header__link">
-              <svg class="icon icon-profile">
-                <use xlink:href="#icon-profile">
-
-                </use>
-              </svg>
-            </a>
-          </div>
-
-
-          <div class="header__item header__item-search">
-            <a href="https://leongguan.com/search" class="header__link" data-action="open-search">
-              <svg class="icon icon-search">
-                <use xlink:href="#icon-search">
-
-                </use>
-              </svg>
-            </a>
-
-            <div class="header__search-wrapper">
-              <a href="https://leongguan.com/account/register#" class="header__link">
-                <svg class="icon icon-search">
-                  <use xlink:href="#icon-search">
-
-                  </use>
-                </svg>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://leongguan.com/pages/cooking-tips-fresh-pasta">Fresh Pasta</a>
+                <a class="dropdown-item" href="https://leongguan.com/pages/cooking-tips-fresh-noodles">Noodle</a>
+                <a class="dropdown-item" href="https://leongguan.com/pages/cooking-tips-beancurd-products">Bean Products</a>
+                <a class="dropdown-item" href="https://leongguan.com/blogs/cooking-tips/cooking-tips-wanton-dumpling-skin">Dumpling Skin</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Retail Products
               </a>
-
-              <form class="header__search-form" action="https://leongguan.com/search" method="GET" role="search">
-                <input type="hidden" name="type" value="product">
-                <input type="search" name="q" class="search__input" autocomplete="off" autocorrect="off" aria-label="Search..." placeholder="Search..." value="">
-              </form>
-
-              <a href="https://leongguan.com/account/register#" class="header__link header__search-close" data-action="close-search">
-                <svg class="icon icon-close-thin">
-                  <use xlink:href="#icon-close-thin">
-
-                  </use>
-                </svg>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://leongguan.com/collections/pasta">Fresh Pasta</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections/wholegrain-noodle">Wholegrain Products</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections/noodle">Noodles</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections/skins">Wanton Wrappers</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections/lg-beancurd">Bean Curd Products</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Foodservice Products
               </a>
-
-              <div class="autocomplete">
-                <span class="autocomplete__spinner" style="display: none">
-                  <svg width="50" height="50" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#004438">
-                    <g fill="none" fill-rule="evenodd">
-                      <g transform="translate(1 1)" stroke-width="2">
-                        <circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle>
-                        <path d="M36 18c0-9.94-8.06-18-18-18"></path>
-                      </g>
-                    </g>
-                  </svg>
-                </span>
-                <ul class="autocomplete__results" style="display: none; width: 523px;"></ul>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://leongguan.com/collections/tofu">Bean Curd Products</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections/frozen">Frozen</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections/fishballs-and-fishcakes">Fishball & Fishcakes</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections/healthier-choice">Healthier Choice Products</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections">Noodles</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Cooked Noodles</a>
+                  <a class="dropdown-item" href="#">Dry Noodles</a>
+                  <a class="dropdown-item" href="#">Uncooked Noodles</a>
+                </div>
+                <a class="dropdown-item" href="https://leongguan.com/collections/pasta">Pasta</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections/vegetarian-1">Vegetarian</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections/wanton-dumpling-wrappers">Wanton/Dumpling wrappers</a>
+                <a class="dropdown-item" href="https://leongguan.com/collections/other-products">Other products</a>
               </div>
-            </div>
-          </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Shop
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://shopee.sg/lgfoods">Shop Online</a>
+                <a class="dropdown-item" href="https://leongguan.com/pages/retail">Retail location</a>
 
-          <div class="header__item header__item-cart">
-            <a href="https://leongguan.com/cart" class="header__link" data-action="open-mini-cart">
-              <div class="cart-icon-wrapper cart-icon-wrapper--has-items" style="display: none">
-                <span class="cart-icon-wrapper__count">0</span>
-                <svg class="icon icon-cart-full">
-                  <use xlink:href="#icon-cart-full">
-
-                  </use>
-                </svg>
               </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://leongguan.com/pages/about-us">Our Company</a>
+                <a class="dropdown-item" href="https://leongguan.com/pages/vision-mission">Our Mission</a>
+                <a class="dropdown-item" href="https://leongguan.com/pages/csr">CSR</a>
 
-              <div class="cart-icon-wrapper cart-icon-wrapper--empty">
-                <svg class="icon icon-cart-empty">
-                  <use xlink:href="#icon-cart-empty">
-
-                  </use>
-                </svg>
               </div>
-            </a>
-          </div>
-        </div>
-
-
-        <nav class="navigation-horizontal navigation-sidebar--open" role="navigation">
-
-
-          <h1 style="font-weight:bold;color:red">This is reverse engineered website, DO NOT key in your TRUE credentials until you stop seeing this warning!</h1>
-
-          <ul class="navigation-horizontal__list">
-
-
-            <li class="navigation-horizontal__list-item">
-              <a href="https://leongguan.com/" class="navigation-horizontal__list-link">Home</a>
             </li>
-
-
-
-
-
-            <li class="navigation-horizontal__list-item navigation-horizontal__list-item--expandable " aria-haspopup="true" aria-expanded="false">
-              <a href="https://leongguan.com/blogs/cooking-tips" class="navigation-horizontal__list-link">Cooking Tips <svg class="icon icon-dropdown-arrow">
-                  <use xlink:href="#icon-dropdown-arrow">
-
-                  </use>
-                </svg></a>
-
-
-              <ul class="navigation-horizontal__dropdown">
-
-
-                <li class="navigation-horizontal__dropdown-item navigation-horizontal__dropdown-item--expandable" aria-haspopup="true" aria-expanded="false">
-                  <a href="https://leongguan.com/pages/cooking-tips-fresh-pasta" class="navigation-horizontal__dropdown-link">Fresh Pasta <svg class="icon icon-dropdown-arrow-right">
-                      <use xlink:href="#icon-dropdown-arrow-right">
-
-                      </use>
-                    </svg></a>
-
-                  <ul class="navigation-horizontal__dropdown">
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-fresh-fettuccine" class="navigation-horizontal__dropdown-link">Fettuccine</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-fresh-spaghetti" class="navigation-horizontal__dropdown-link">Spaghetti</a>
-                    </li>
-
-                  </ul>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item navigation-horizontal__dropdown-item--expandable" aria-haspopup="true" aria-expanded="false">
-                  <a href="https://leongguan.com/pages/cooking-tips-fresh-noodles" class="navigation-horizontal__dropdown-link">Noodles <svg class="icon icon-dropdown-arrow-right">
-                      <use xlink:href="#icon-dropdown-arrow-right">
-
-                      </use>
-                    </svg></a>
-
-                  <ul class="navigation-horizontal__dropdown">
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-yellow-noodles" class="navigation-horizontal__dropdown-link">Yellow Noodles</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-kway-teow" class="navigation-horizontal__dropdown-link">Kway Teow</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-for-mee-tai-bak" class="navigation-horizontal__dropdown-link">Mee Tai Bak</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-ipoh-hor-fun" class="navigation-horizontal__dropdown-link">Ipoh Hor Fun</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-hor-fun" class="navigation-horizontal__dropdown-link">Hor Fun</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-wanton-mee-kia" class="navigation-horizontal__dropdown-link">Wanton Mee Kia/Mee Pok</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-dan-dan-mee-kia" class="navigation-horizontal__dropdown-link">Dan Dan Mee Kia</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-thick-vermicelli" class="navigation-horizontal__dropdown-link">Thick Vermicelli</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-rice-vermicelli" class="navigation-horizontal__dropdown-link">Rice Vermicelli</a>
-                    </li>
-
-                  </ul>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item navigation-horizontal__dropdown-item--expandable" aria-haspopup="true" aria-expanded="false">
-                  <a href="https://leongguan.com/pages/cooking-tips-beancurd-products" class="navigation-horizontal__dropdown-link">Bean Products <svg class="icon icon-dropdown-arrow-right">
-                      <use xlink:href="#icon-dropdown-arrow-right">
-
-                      </use>
-                    </svg></a>
-
-                  <ul class="navigation-horizontal__dropdown">
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/golden-tofu" class="navigation-horizontal__dropdown-link">Golden Tofu</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/pressed-tofu" class="navigation-horizontal__dropdown-link">Pressed Tofu</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/silken-tofu" class="navigation-horizontal__dropdown-link">Silken Tofu</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/blogs/cooking-tips/taukwa" class="navigation-horizontal__dropdown-link">Taukwa</a>
-                    </li>
-
-                  </ul>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/blogs/cooking-tips/cooking-tips-wanton-dumpling-skin" class="navigation-horizontal__dropdown-link">Dumpling/Wanton Skin</a>
-                </li>
-
-
-              </ul>
-
+            <li class="nav-item active">
+              <a class="nav-link" href="https://leongguan.com/blogs/news">Blog </a>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contact
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://leongguan.com/pages/contact-us">Contact</a>
+                <a class="dropdown-item" href="https://leongguan.com/pages/order-enquiry">Enquiry</a>
 
-
-
-
-
-            <li class="navigation-horizontal__list-item navigation-horizontal__list-item--expandable " aria-haspopup="true" aria-expanded="false">
-              <a href="https://leongguan.com/collections/wholegrain-noodle" class="navigation-horizontal__list-link">Retail Products <svg class="icon icon-dropdown-arrow">
-                  <use xlink:href="#icon-dropdown-arrow">
-
-                  </use>
-                </svg></a>
-
-
-              <ul class="navigation-horizontal__dropdown">
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/pasta" class="navigation-horizontal__dropdown-link">Fresh Pasta</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/wholegrain-noodle" class="navigation-horizontal__dropdown-link">Wholegrain Products</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/noodle" class="navigation-horizontal__dropdown-link">Noodles</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/skins" class="navigation-horizontal__dropdown-link">Wanton Wrappers</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/lg-beancurd" class="navigation-horizontal__dropdown-link">Bean Curd Products</a>
-                </li>
-
-
-              </ul>
-
+              </div>
             </li>
-
-
-
-
-
-            <li class="navigation-horizontal__list-item navigation-horizontal__list-item--expandable " aria-haspopup="true" aria-expanded="false">
-              <a href="https://leongguan.com/collections/all" class="navigation-horizontal__list-link">Foodservice Products <svg class="icon icon-dropdown-arrow">
-                  <use xlink:href="#icon-dropdown-arrow">
-
-                  </use>
-                </svg></a>
-
-
-              <ul class="navigation-horizontal__dropdown">
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/tofu" class="navigation-horizontal__dropdown-link">Bean Curd Products</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/frozen" class="navigation-horizontal__dropdown-link">Frozen</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/fishballs-and-fishcakes" class="navigation-horizontal__dropdown-link">Fishball &amp; Fishcakes</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/healthier-choice" class="navigation-horizontal__dropdown-link">Healthier Choice Products</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item navigation-horizontal__dropdown-item--expandable" aria-haspopup="true" aria-expanded="false">
-                  <a href="https://leongguan.com/collections" class="navigation-horizontal__dropdown-link">Noodles <svg class="icon icon-dropdown-arrow-right">
-                      <use xlink:href="#icon-dropdown-arrow-right">
-
-                      </use>
-                    </svg></a>
-
-                  <ul class="navigation-horizontal__dropdown">
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/collections/cooked-noodles" class="navigation-horizontal__dropdown-link">Cooked Noodles</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/collections/dry-noodles" class="navigation-horizontal__dropdown-link">Dry Noodles</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://leongguan.com/collections/uncooked-noodles" class="navigation-horizontal__dropdown-link">Uncooked Noodles</a>
-                    </li>
-
-                  </ul>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/pasta" class="navigation-horizontal__dropdown-link">Pasta</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/vegetarian-1" class="navigation-horizontal__dropdown-link">Vegetarian</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/wanton-dumpling-wrappers" class="navigation-horizontal__dropdown-link">Wanton/Dumpling Wrappers</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/collections/other-products" class="navigation-horizontal__dropdown-link">Other Products</a>
-                </li>
-
-
-              </ul>
-
-            </li>
-
-
-
-
-
-            <li class="navigation-horizontal__list-item navigation-horizontal__list-item--expandable " aria-haspopup="true" aria-expanded="false">
-              <a href="https://leongguan.com/collections" class="navigation-horizontal__list-link">Shop <svg class="icon icon-dropdown-arrow">
-                  <use xlink:href="#icon-dropdown-arrow">
-
-                  </use>
-                </svg></a>
-
-
-              <ul class="navigation-horizontal__dropdown">
-
-
-                <li class="navigation-horizontal__dropdown-item navigation-horizontal__dropdown-item--expandable" aria-haspopup="true" aria-expanded="false">
-                  <a href="https://shopee.sg/lgfoods" class="navigation-horizontal__dropdown-link">Shop Online <svg class="icon icon-dropdown-arrow-right">
-                      <use xlink:href="#icon-dropdown-arrow-right">
-
-                      </use>
-                    </svg></a>
-
-                  <ul class="navigation-horizontal__dropdown">
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://shopee.sg/lgfoods" class="navigation-horizontal__dropdown-link">Shopee</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://coldstorage.com.sg/leong-guan" class="navigation-horizontal__dropdown-link">Cold Storage</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://giant.sg/leong-guan" class="navigation-horizontal__dropdown-link">Giant Online</a>
-                    </li>
-
-                    <li class="navigation-horizontal__dropdown-item">
-                      <a href="https://www.fairprice.com.sg/category/lg-foods" class="navigation-horizontal__dropdown-link">FairPrice On</a>
-                    </li>
-
-                  </ul>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/pages/retail" class="navigation-horizontal__dropdown-link">Retail Locations</a>
-                </li>
-
-
-              </ul>
-
-            </li>
-
-
-
-
-
-            <li class="navigation-horizontal__list-item navigation-horizontal__list-item--expandable " aria-haspopup="true" aria-expanded="false">
-              <a href="https://leongguan.com/pages/about-us" class="navigation-horizontal__list-link">About <svg class="icon icon-dropdown-arrow">
-                  <use xlink:href="#icon-dropdown-arrow">
-
-                  </use>
-                </svg></a>
-
-
-              <ul class="navigation-horizontal__dropdown">
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/pages/about-us" class="navigation-horizontal__dropdown-link">Our Company</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/pages/vision-mission" class="navigation-horizontal__dropdown-link">Our Mission</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/pages/csr" class="navigation-horizontal__dropdown-link">CSR</a>
-                </li>
-
-
-              </ul>
-
-            </li>
-
-
-
-            <li class="navigation-horizontal__list-item">
-              <a href="https://leongguan.com/blogs/news" class="navigation-horizontal__list-link">Blog</a>
-            </li>
-
-
-
-
-
-            <li class="navigation-horizontal__list-item navigation-horizontal__list-item--expandable " aria-haspopup="true" aria-expanded="false">
-              <a href="https://leongguan.com/pages/contact-us" class="navigation-horizontal__list-link">Contact <svg class="icon icon-dropdown-arrow">
-                  <use xlink:href="#icon-dropdown-arrow">
-
-                  </use>
-                </svg></a>
-
-
-              <ul class="navigation-horizontal__dropdown">
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/pages/contact-us" class="navigation-horizontal__dropdown-link">Contact</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/pages/order-enquiry" class="navigation-horizontal__dropdown-link">Enquiry</a>
-                </li>
-
-
-              </ul>
-
-            </li>
-
-
-
-
-
-            <li class="navigation-horizontal__list-item navigation-horizontal__list-item--expandable " aria-haspopup="true" aria-expanded="false">
-              <a href="https://leongguan.com/pages/about-us" class="navigation-horizontal__list-link">Language 语言 <svg class="icon icon-dropdown-arrow">
-                  <use xlink:href="#icon-dropdown-arrow">
-
-                  </use>
-                </svg></a>
-
-
-              <ul class="navigation-horizontal__dropdown">
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/" class="navigation-horizontal__dropdown-link">English</a>
-                </li>
-
-
-
-                <li class="navigation-horizontal__dropdown-item">
-                  <a href="https://leongguan.com/zh-CN" class="navigation-horizontal__dropdown-link">中文</a>
-                </li>
-
-
-              </ul>
-
-            </li>
-
-
           </ul>
 
-        </nav>
+          <ul class="ml-auto navbar-nav">
+          @if (Route::has('login'))
+                    @auth
+                       <li class="nav-item"><a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline"></a></li>
+                       <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
 
-      </header>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                    @else
+                    <li class="nav-item"><a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a></li>
+
+                        @if (Route::has('register'))
+                        <li class="nav-item"><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a></li>
+                        @endif
+                    @endif
+            @endif
+          </ul>
+        </div>
+      </nav>
 
 
       <style>
@@ -1712,21 +569,23 @@
   </div>
 
 
+  <script src="{{asset('js/jquery.min.js.download')}}" type="text/javascript"></script>
+  <script src="{{asset('js/lazysizes.min.js.download')}}" async=""></script>
 
+  <script src="{{asset('js/modernizr.min.js.download')}}" type="text/javascript"></script>
+  <script src="{{asset('js/jquery.bxslider.js.download')}}" type="text/javascript"></script>
+  <!-- 
 
-  <!-- <script src="./Create Account – LG Foods_files/jquery.min.js.download" type="text/javascript"></script>
-    <script src="./Create Account – LG Foods_files/modernizr.min.js.download" type="text/javascript"></script>
+    
 
     
 
     
-
-    
-
     <script src="./Create Account – LG Foods_files/polyfill.min.js.download" type="text/javascript"></script>
     <script src="./Create Account – LG Foods_files/libs.js.download" type="text/javascript"></script>
     <script src="./Create Account – LG Foods_files/script.js.download" type="text/javascript"></script><div class="remodal-overlay remodal-is-closed" style="display: none;"></div><div class="remodal-wrapper remodal-is-closed" style="display: none;"><div class="quick-shop modal modal--large remodal remodal-is-initialized remodal-is-closed" tabindex="-1"> -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <script src="{{asset('js/jquery.easing.1.3.js.download')}}" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <!-- <div class="quick-shop__spinner spinner-container spinner-container--large">
