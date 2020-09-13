@@ -39,22 +39,42 @@ class purchaseController extends Controller
         // $productOrdered = orderedItems::where('userid',$user->id)->get();
         // $productName = products::where('productName',$productOrdered)->get();
         $products = orderedItems::select("*")
-        ->join('products','products.id','=','ordered_items.id')
-        ->where('ordered_items.userid',Auth::id())->get();
-
+        ->join('products','products.id','=','ordered_items.productID')
+        ->join('users','users.id','=','ordered_items.userid')
+        ->where('ordered_items.userid',$user->id)
+        ->where('status',null)->get();
         return view('redeem')->with('products',$products);
         // event(new puchaseMade(Auth::user()->firstname, $actionData));
     }
     public function pay(){
-        // $products = orderedItems::select("*")
-        // ->join('products','products.id','=','ordered_items.id')
-        // ->where('ordered_items.userid',Auth::id())->where('status',null)->get();
-        $products = orderedItems::where('userid',Auth::id());
-        if(!$products){
-            orderedItems::where('userid',Auth::id())->delete();
-            return view('redeem')->with('paid','You have paid');
+        $user = Auth::User();
+        $products = orderedItems::select("*")
+        ->join('products','products.id','=','ordered_items.productID')
+        ->join('users','users.id','=','ordered_items.userid')
+        ->where('ordered_items.userid',$user->id)
+        ->where('status',null)->get();
+        $loopthru = 0;
+        // dd($products);
+        // $products = orderedItems::where('userid',Auth::id());
+        // dd($products->first() ==null);
+        if($products->first() !==null){
+            // dd($products);
+            // foreach($products as $product){
+                    //     $product->status = "paid";
+                    //     $loopthru++;
+                    // }
+                    // $products->save();
+                    // dd($products);
+                    $products = orderedItems::select("*")
+                    ->join('products','products.id','=','ordered_items.productID')
+                    ->join('users','users.id','=','ordered_items.userid')
+                    ->where('ordered_items.userid',$user->id)
+                    ->where('status',null)->update(['status'=>'paid']);
+
+            return view('redeem')->with('paid','You have finalised your payment');
         }
         else{
+            
             return view('redeem')->with('paid','You have not ordered anything yet');
         }
         // dd($products);

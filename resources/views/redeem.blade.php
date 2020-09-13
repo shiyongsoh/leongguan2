@@ -33,6 +33,7 @@
         <div class="card-body">
           <p> {{$redeemStatus ?? ''}}</p>
           <p> {{$paid ?? ''}}</p>
+          <p> {{$debug ?? ''}}</p>
           <!-- <h3>You have:</h3> -->
 
         </div>
@@ -124,7 +125,7 @@
             <label class="form__label" for="customer__first-name">Amount</label>
             <input type="number" id="customer__first-name" name="amount">
           </div>
-          <input type="hidden" id="customer__first-name" name="productID" value="0">
+          <input type="hidden" id="customer__first-name" name="productID" value="2">
 
           <button type="reset" class="btn btn-secondary" data-dismiss="modal">reset</button>
           <button type="submit" class="btn btn-success">Add to cart</button>

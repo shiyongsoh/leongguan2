@@ -37,7 +37,7 @@ class HomeController extends Controller
         $user = Auth::User();
         $products = orderedItems::select("*")
         ->join('products','products.id','=','ordered_items.productID')
-        ->join('users','products.id','=','ordered_items.productID')
+        ->join('users','users.id','=','ordered_items.userid')
         ->where('ordered_items.userid',$user->id)
         ->where('status',null)->get();
         return view("redeem")->with('products',$products);
