@@ -52,12 +52,15 @@ Route::get('/food/{id}', [HomeController::class, 'kiosk']);
 Route::get('admin', [AdminController::class, 'listFood']);
 Route::post('buy', [purchaseController::class, 'purchase']);
 Route::get('finalise', [purchaseController::class, 'pay']);
-
+Route::get('/showProfile',[HomeController::class, 'showProfile']);
+Route::get('/setProfile/{name}',[HomeController::class, 'setProfile']);
 
 Route::post('/admin', [AdminController::class, 'insertFood']);
 
 //test
+Route::get('/redisTest',[HomeController::class,'redis_test']);
+
 Route::get('/fire', function () {
-    event(new \App\Events\puchaseMade());
+    event(new \App\Events\purchaseMade());
     return 'hmm';
 });

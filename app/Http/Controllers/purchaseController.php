@@ -5,7 +5,8 @@ use App\Models\orderedItems;
 use App\Models\products;
 use Auth;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Redis;//for port programming
+use App\Events\purchaseMade;
 class purchaseController extends Controller
 {
     public function __construct()
@@ -16,6 +17,11 @@ class purchaseController extends Controller
         
     }
     public function purchase(Request $request){
+        $redis = Redis::connection();
+        // $redis = Redis::connection();
+        Redis::set('name', $request);
+        broadcast(new purchaseMade($request));
+        // Redis::set('name', $request->input('amount'));
         $user = Auth::User();
         $cart = orderedItems::where("userid",$user->id)->where('productID',$request->input('productID'))->where("status",null)->exists();
         if($cart){

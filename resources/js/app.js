@@ -1,4 +1,5 @@
 require('./bootstrap');
+// require('./redisSocket');
 
 import Vue from 'vue';
 

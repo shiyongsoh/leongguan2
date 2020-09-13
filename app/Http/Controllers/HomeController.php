@@ -10,8 +10,16 @@ use App\Models\orderedItems;
 use Socialite;
 use Auth;
 use App\Events\puchaseMade;
+
+use Illuminate\Support\Facades\Redis;//for port programming
 class HomeController extends Controller
 {
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
     public function __construct()
     {
         // $this->middleware('auth');//commented to enable mail authentication
@@ -66,6 +74,20 @@ class HomeController extends Controller
             $redeemStatus="You have successfully reedemed your trial pack";
             return view("redeem")->with('redeemStatus',$redeemStatus);
         }
+    }
+    public function showProfile($id)
+    {
+        $user = Redis::get('name'.$id);
+        dd($user);
+        return view('redeem')->with('paid',$paid);
+    }
+    public function setProfile(Request $request,$id){
+        $redis = Redis::connection();
+        // $redis = Redis::connection();
+        Redis::set('name', 'Taylor');
+
+        // $values = Redis::lrange('names', 5, 10);
+
     }
    
 }

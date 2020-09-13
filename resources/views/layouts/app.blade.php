@@ -9,7 +9,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
-
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>
     Create Account – LG Foods
   </title>
@@ -36,11 +36,13 @@
   <meta property="og:url" content="https://leongguan.com/account/register">
   <meta property="og:site_name" content="LG Foods">
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js">
+  <script src="/socket.io/socket.io.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
+  <script src="{{ asset('js/app.js') }}" defer></script>
+  
   <meta name="twitter:card" content="summary">
 
 
@@ -66,8 +68,12 @@
       }
     }
   </style>
-
-
+ <script>
+        Echo.channel('leongguan')
+            .listen('purchaseMade', e => {
+                console.log(e)
+            })
+    </script>
   <script>
     // This allows to expose several variables to the global scope, to be used in scripts
     window.shop = {
@@ -389,9 +395,23 @@
 
               </div>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Food Recepies
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/food/meesoto">Mee Soto</a>
+                <a class="dropdown-item" href="/food/meegoreng">Mee Goreng</a>
+                <a class="dropdown-item" href="/food/currychicken">Curry Chicken</a>
+                <a class="dropdown-item" href="/food/hokkienmee">Hokkienmee</a>
+                <a class="dropdown-item" href="/food/hokkienmeefriednoodle">Hokkien Mee Fried Noodle</a>
+
+              </div>
+            </li>
           </ul>
 
           <ul class="ml-auto navbar-nav">
+            
           @if (Route::has('login'))
                     @auth
                        <li class="nav-item"><a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline"></a></li>
@@ -415,17 +435,20 @@
           </ul>
         </div>
       </nav>
-
-
+      
+      
       <style>
         .header__logo-image {
           max-width: 60px;
         }
       </style>
 
-    </div>
+</div>
 
-    <main id="main" class="main" role="main">
+<main id="main" class="main" role="main">
+  <div class="d-flex justify-content-center alert-warning">
+      <p>This is not a genuine website, DO NOT KEY IN YOUR REAL CREDENTIALS!</p>
+  </div>
 
 
 
@@ -574,6 +597,7 @@
 
   <script src="{{asset('js/modernizr.min.js.download')}}" type="text/javascript"></script>
   <script src="{{asset('js/jquery.bxslider.js.download')}}" type="text/javascript"></script>
+  <!-- <script src="{{asset('js/redisSocket.js')}}" type="text/javascript"></script> -->
   <!-- 
 
     
