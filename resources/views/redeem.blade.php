@@ -5,28 +5,10 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
     @if(!empty($products))
-      <table class="table live_updates">
-        <thead>
-          <th scope="col">Product Name</th>
-          <th scope="col">amount</th>
-          <th scope="col">SubTotal/Total</th>
-        </thead>
-        
-        @foreach($products as $product)
-        <tr>
-
-          <td>{{ $product->productName }}</td>
-          <td class="{{$product->id}}">{{ $product->amount }}</td>
-          <td class="{{$product->id}}">{{$product->amount * $product->price}}</td>
-        </tr>
-        @endforeach
-        
-      </table>
-      @endif
-      
-      @if(!empty($products))
       <a href="/finalise" class="button button--secondary">Finalise payment</a>
       @endif
+      
+      
       <div class="card">
         <div class="card-header">Hi {{ Auth::user()->firstname }}</div>
 
@@ -62,6 +44,7 @@
         <div class="card-body">
           <p class="h3">Normal Pack</p>
           <p>Boil and go.</p>
+          <p id='1'>Amount ordered {{$products[0]->amount ?? ''}}</p>
           <a href="#normalPack" class="button button--secondary" data-toggle="modal" data-target="#normalPack">Find Out more >></a>
           <!-- <p>{{$product1 ?? ''}}</p> -->
         </div>
@@ -73,6 +56,7 @@
         <div class="card-body">
           <p class="h3">Big Pack</p>
           <p>Twice the serving, twice the happiness</p>
+          <p id='2'>Amount ordered {{$products[0]->amount ?? ''}}</p>
           <a href="#bigPack" class="button button--secondary" data-toggle="modal" data-target="#bigPack">Find Out more >></a>
         </div>
       </div>

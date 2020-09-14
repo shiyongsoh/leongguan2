@@ -112,13 +112,11 @@
 <script src="{{ asset('js/app.js') }}"></script>
  <script>
         Echo.channel('leongguan')
-            .listen('.purchaseMade', (e) => {
-                console.log(e);
-                var table = document.getElementsByClassName("live_updates");
-                for(var i=0; i<e.length; i++){
-                  
-                  table.innerHTML = e[i][0];
-                }
+            .listen('.purchaseMade', (data) => {
+                console.log(data);
+                document.getElementById('1').innerHTML = 'Amount ordered '+data[0][0].amount;
+                document.getElementById('2').innerHTML = 'Amount ordered '+data[1][0].amount;
+                
             });
     </script>
   <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
