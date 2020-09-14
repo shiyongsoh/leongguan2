@@ -70,7 +70,7 @@
   </style>
  <script>
         Echo.channel('leongguan')
-            .listen('purchaseMade', e => {
+            .listen('puchaseMade', e => {
                 console.log(e)
             })
     </script>

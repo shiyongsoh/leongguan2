@@ -60,6 +60,11 @@ Route::post('/admin', [AdminController::class, 'insertFood']);
 //test
 Route::get('/redisTest',[HomeController::class,'redis_test']);
 
+// Route::get('/fire', function () {
+//     event(new \App\Events\TestEvent());
+//     return 'ok';
+// });
+
 Route::get('/fire', function () {
     event(new \App\Events\purchaseMade());
     return 'hmm';

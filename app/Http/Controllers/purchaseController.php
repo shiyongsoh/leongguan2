@@ -17,7 +17,7 @@ class purchaseController extends Controller
         
     }
     public function purchase(Request $request){
-        $redis = Redis::connection();
+        // $redis = Redis::connection();
         // $redis = Redis::connection();
         Redis::set('name', $request);
         broadcast(new purchaseMade($request));
