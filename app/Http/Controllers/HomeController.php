@@ -52,8 +52,8 @@ class HomeController extends Controller
             $kioskCode = kioskCode::where('userid',$user->id)->latest()->first();
         }
         // dd($kioskCode);
-        // dd(!$kioskCode->whereNull('active')->exists());
-        if(!$kioskCode->whereNull('active')->exists() || !$kioskCode->whereNull('kiosk_userid')->exists()){
+        // dd(empty($kioskCode->active));
+        if(empty($kioskCode->active) || empty($kioskCode->kiosk_userid)){
             return redirect()->action([kioskCodeController::class, 'giveKioskCode']);
         }
         else{

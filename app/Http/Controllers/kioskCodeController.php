@@ -27,17 +27,23 @@ class kioskCodeController extends Controller
     public function receiveCode(Request $request,$id){
         $user = Auth::User();
         $checkCode = kioskCode::where('kioskCode',$request->kioskCode)->whereNull('active')->latest()->first();
-        if($checkCode->exists() && $user->role == 'kiosk'){
-            $checkCode->kiosk_userid = $user->id;
-            $checkCode->save();
-            // dd($checkCode);
-            return redirect()->action([HomeController::class, 'kiosk'],[$id]);
+        if($checkCode ==null){
+            return view('kiosk')->with('message','This is an invalid code');
         }
         else{
-
-            return view('setCode')->with('message','you gave the wrong code');
+            if($checkCode->exists() && $user->role == 'kiosk'){
+                $invalidateAllCode = kioskCode::where('active')->update(['active'=>'invalid']);
+                $checkCode->kiosk_userid = $user->id;
+                $checkCode->save();
+                // dd($checkCode);
+                return redirect()->action([HomeController::class, 'kiosk'],[$id]);
+            }
+            else{
+    
+                return view('kiosk')->with('message','you gave the wrong code');
+            }
+            
         }
-        
         
     }
     public function checkForKioskCode(Request $request,$id){

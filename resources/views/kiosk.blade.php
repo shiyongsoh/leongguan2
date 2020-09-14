@@ -13,7 +13,7 @@
         <input type="text" id="kioskCode" name="kioskCode" required autofocus>
         <input type="submit">
     </form>
-    
+    <h6 class="text-danger">{{$message}}</h6>
     </div>
 
 @endsection
