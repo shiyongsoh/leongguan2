@@ -39,6 +39,28 @@ class purchaseMade implements ShouldBroadcast
     {
         return new Channel('leongguan');
     }
+    // public function broadcastWith()
+    // {
+    //     $user = Auth::User();
+        
+    //     $products = orderedItems::select("*")
+    //     ->join('products','products.id','=','ordered_items.productID')
+    //     ->join('users','users.id','=','ordered_items.userid')
+    //     ->where('ordered_items.userid',$user->id)
+    //     ->where('status',null);
+    //     if($products->first() !==null){
+    //         return ['you have not ordered anything yet'];
+    //     }
+    //     else{
+
+    //         return [$products->get()];
+    //     }
+    //     // return [
+    //     //     'actionId' => $this->actionId,
+    //     //     'actionData' => $this->actionData,
+    //     // ];
+    // }
+
     public function broadcastWith()
     {
         $user = Auth::User();
@@ -48,11 +70,8 @@ class purchaseMade implements ShouldBroadcast
         ->where('ordered_items.userid',$user->id)
         ->where('status',null)->get();
         return [$products];
-        // return [
-        //     'actionId' => $this->actionId,
-        //     'actionData' => $this->actionData,
-        // ];
     }
+    
     public function broadcastAs()
     {
         return 'purchaseMade';

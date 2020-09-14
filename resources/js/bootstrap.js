@@ -34,4 +34,6 @@ window.Echo = new Echo({
     // broadcaster: 'socket.io',
     broadcaster: 'socket.io',
     host: window.location.hostname + ':6001' // this is laravel-echo-server host
+	
 });
+console.log(window.location.hostname);

@@ -41,7 +41,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script src="{{ asset('js/app.js') }}" defer></script>
   
   <meta name="twitter:card" content="summary">
 
@@ -51,6 +50,7 @@
   <link rel="alternate" hreflang="en" href="https://leongguan.com/account/register">
   <link rel="alternate" hreflang="zh-CN" href="https://leongguan.com/zh-cn/account/register">
 
+  
 
   <!-- <script defer="defer" src="./Create Account – LG Foods_files/ga_urchin_f.orms-99e991855b3d8ddc69e625c68ab0579dd9927b611c2ec4943d396c72e3af0849.js.download"></script> -->
 
@@ -68,12 +68,6 @@
       }
     }
   </style>
- <script>
-        Echo.channel('leongguan')
-            .listen('puchaseMade', e => {
-                console.log(e)
-            })
-    </script>
   <script>
     // This allows to expose several variables to the global scope, to be used in scripts
     window.shop = {
@@ -115,6 +109,13 @@
 
 
 <body class="kagami--v6 template-customers-register ">
+<script src="{{ asset('js/app.js') }}"></script>
+ <script>
+        Echo.channel('leongguan')
+            .listen('.purchaseMade', (e) => {
+                console.log(e)
+            });
+    </script>
   <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
       <symbol id="icon-google-plus" viewBox="0 0 41 32">
