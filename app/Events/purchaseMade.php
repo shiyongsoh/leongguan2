@@ -48,7 +48,7 @@ class purchaseMade implements ShouldBroadcast
     //     ->join('users','users.id','=','ordered_items.userid')
     //     ->where('ordered_items.userid',$user->id)
     //     ->where('status',null);
-    //     if($products->first() !==null){
+    //     if($products->first() ==null){
     //         return ['you have not ordered anything yet'];
     //     }
     //     else{

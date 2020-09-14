@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\purchaseController;
+use App\Http\Controllers\kioskCodeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,9 @@ Route::get('/food/hokkienmee', function () {
 Route::get('/food/hokkienmeefriednoodle', function () {
     return view('hokkienFriedNoodle');
 });
-
+Route::get('/food/packs', function () {
+    return view('packs');
+});
 
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -46,17 +49,23 @@ Route::get('/food/hokkienmeefriednoodle', function () {
 Route::get('/addProduct', [AdminController::class,'addProductPage']);
 Route::post('/addProduct', [AdminController::class,'addProduct']);
 Route::get('/dashboard', [HomeController::class, 'index']);
-Route::get('/kiosk/{id}', [HomeController::class, 'kiosk']);
+Route::get('/kiosk/{id}', [kioskCodeController::class, 'checkForKioskCode']);
 Route::get('/redeem', [HomeController::class, 'redeem']);
 Route::get('/food/{id}', [HomeController::class, 'kiosk']);
-Route::get('admin', [AdminController::class, 'listFood']);
-Route::post('buy', [purchaseController::class, 'purchase']);
-Route::get('finalise', [purchaseController::class, 'pay']);
+Route::get('/admin', [AdminController::class, 'listFood']);
+Route::post('/buy', [purchaseController::class, 'purchase']);
+Route::get('/finalise', [purchaseController::class, 'pay']);
 Route::get('/showProfile',[HomeController::class, 'showProfile']);
 Route::get('/setProfile/{name}',[HomeController::class, 'setProfile']);
 
 Route::post('/admin', [AdminController::class, 'insertFood']);
 
+//kioskCode
+Route::get('/givekioskcode',[kioskCodeController::class,'giveKioskCode']);
+Route::post('/receiveCode/{id}',[kioskCodeController::class,'receiveCode']);
+
+//survey
+Route::post('/survey',[HomeController::class,'getSurvey']);
 //test
 Route::get('/redisTest',[HomeController::class,'redis_test']);
 

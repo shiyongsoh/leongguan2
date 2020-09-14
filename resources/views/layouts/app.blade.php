@@ -113,7 +113,12 @@
  <script>
         Echo.channel('leongguan')
             .listen('.purchaseMade', (e) => {
-                console.log(e)
+                console.log(e);
+                var table = document.getElementsByClassName("live_updates");
+                for(var i=0; i<e.length; i++){
+                  
+                  table.innerHTML = e[i][0];
+                }
             });
     </script>
   <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -436,7 +441,7 @@
           </ul>
         </div>
       </nav>
-      
+      <p id="live_updates"></p>
       
       <style>
         .header__logo-image {

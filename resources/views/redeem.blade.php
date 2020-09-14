@@ -5,7 +5,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
     @if(!empty($products))
-      <table class="table">
+      <table class="table live_updates">
         <thead>
           <th scope="col">Product Name</th>
           <th scope="col">amount</th>
@@ -16,8 +16,8 @@
         <tr>
 
           <td>{{ $product->productName }}</td>
-          <td>{{ $product->amount }}</td>
-          <td>{{$product->amount * $product->price}}</td>
+          <td class="{{$product->id}}">{{ $product->amount }}</td>
+          <td class="{{$product->id}}">{{$product->amount * $product->price}}</td>
         </tr>
         @endforeach
         

@@ -20,9 +20,13 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->integer('age');
+            $table->string('gender');
+            $table->string('newsletter');
             $table->rememberToken();
             $table->string('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();
+            $table->string('favoriteFood')->nullable();
             $table->text('role')->nullable();
             $table->integer('number')->nullable();
             $table->timestamps();

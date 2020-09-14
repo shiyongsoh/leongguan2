@@ -18,6 +18,7 @@ class CreateOrderedItemsTable extends Migration
             $table->integer('productID')->foreign('productID')->references('id')->on('products');
             $table->integer('userid')->foreign('userid')->references('id')->on('users');
             $table->string('status')->nullable();
+            $table->string('kioskCode')->foreign('kioskCode')->references('kiosk_codes')->on('kioskCode')->nullable();
             $table->integer('cart');
             $table->timestamps();
         });

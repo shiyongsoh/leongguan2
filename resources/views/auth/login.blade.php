@@ -1,5 +1,8 @@
-@extends('layouts.guest')
-@section('content')
+
+<x-guest-layout>
+<x-jet-authentication-card>
+        <x-jet-validation-errors class="mb-4" />
+    </x-jet-authentication-card>
 <form method="post" action="{{ route('login') }}" id="customer_login" accept-charset="UTF-8" class="form--shrinked"><input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓">
         @csrf
 
@@ -25,4 +28,4 @@
   <h4 class="page__footer-text">Not a member yet?</h4>
   <a href="/register" class="button button--secondary">Register now</a>
 </footer>
-@endsection
+</x-guest-layout>
