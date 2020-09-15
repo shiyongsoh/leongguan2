@@ -22,6 +22,7 @@ class kioskCodeController extends Controller
         $saveCode->userid = $user->id;
         $saveCode->kioskCode = $kioskCode;
         $saveCode->save();
+        
         return view('giveKioskCode')->with('kioskCode',$kioskCode);
     }
     public function receiveCode(Request $request,$id){
@@ -54,7 +55,11 @@ class kioskCodeController extends Controller
         // ->whereNull('status')->exists();
         $kioskCode = kioskCode::where('userid',$user->id)->latest()->first();
         // dd($id);
-        if(!$kioskCode){
+        // dd($user->role == 'kiosk');
+        if($user->role == 'kiosk'){
+            return redirect()->action([HomeController::class, 'kiosk'],[$id]);
+        }
+        else if(!$kioskCode){
             $kioskCode = mt_rand(100000, 999999);
             $user = Auth::User();
             $saveCode = new kioskCode();

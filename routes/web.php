@@ -41,6 +41,9 @@ Route::get('/food/hokkienmeefriednoodle', function () {
 Route::get('/food/packs', function () {
     return view('packs');
 });
+Route::get('/kioskwelcome', function () {
+    return view('kioskwelcome');
+});
 
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -55,7 +58,8 @@ Route::get('/redeem', [HomeController::class, 'redeem']);
 Route::get('/food/{id}', [HomeController::class, 'kiosk']);
 Route::get('/admin', [AdminController::class, 'listFood']);
 Route::post('/buy', [purchaseController::class, 'purchase']);
-Route::get('/finalise', [purchaseController::class, 'pay']);
+Route::get('/finalise', [purchaseController::class, 'finalisePayment']);
+Route::get('/pay', [purchaseController::class, 'pay']);
 Route::get('/showProfile',[HomeController::class, 'showProfile']);
 Route::get('/setProfile/{name}',[HomeController::class, 'setProfile']);
 
@@ -71,6 +75,9 @@ Route::post('/survey',[HomeController::class,'getSurvey']);
 //google
 Route::get('/redirect', [SocialAuthGoogleController::class,'redirect']);
 Route::get('/callback', [SocialAuthGoogleController::class,'callback']);
+
+//kiosk welcome
+Route::get('/kioskWelcome', [HomeController::class,'kioskWelcome']);
 
 //test
 Route::get('/redisTest',[HomeController::class,'redis_test']);

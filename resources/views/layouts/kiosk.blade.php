@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="{{ asset('css/theme.scss.css') }}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="canonical" href="https://leongguan.com/account/register">
 
 
@@ -37,11 +38,12 @@
   <meta property="og:site_name" content="LG Foods">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js">
-  <script src="/socket.io/socket.io.js"></script>
+    < script src = "/socket.io/socket.io.js" >
+  </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  
+
   <meta name="twitter:card" content="summary">
 
 
@@ -50,7 +52,7 @@
   <link rel="alternate" hreflang="en" href="https://leongguan.com/account/register">
   <link rel="alternate" hreflang="zh-CN" href="https://leongguan.com/zh-cn/account/register">
 
-  
+
 
   <!-- <script defer="defer" src="./Create Account – LG Foods_files/ga_urchin_f.orms-99e991855b3d8ddc69e625c68ab0579dd9927b611c2ec4943d396c72e3af0849.js.download"></script> -->
 
@@ -109,16 +111,16 @@
 
 
 <body class="kagami--v6 template-customers-register ">
-<script src="{{ asset('js/app.js') }}"></script>
- <script>
-        Echo.channel('leongguan')
-            .listen('.purchaseMade', (data) => {
-                console.log(data);
-                document.getElementById('1').innerHTML = 'Amount ordered '+data[0][0].amount;
-                document.getElementById('2').innerHTML = 'Amount ordered '+data[1][0].amount;
-                
-            });
-    </script>
+  <script src="{{ asset('js/app.js') }}"></script>
+  <script>
+    Echo.channel('leongguan')
+      .listen('.purchaseMade', (data) => {
+        console.log(data);
+        document.getElementById('1').innerHTML = 'Amount ordered ' + data[0][0].amount;
+        document.getElementById('2').innerHTML = 'Amount ordered ' + data[1][0].amount;
+
+      });
+  </script>
   <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
       <symbol id="icon-google-plus" viewBox="0 0 41 32">
@@ -294,6 +296,9 @@
     <div id="shopify-section-announcement" class="shopify-section shopify-section__announcement-bar">
 
       <style>
+      body{
+        background-color: #eeeeee;
+      }
         .announcement-bar {
           text-align: center;
           color: #004438;
@@ -302,157 +307,12 @@
       </style>
 
     </div>
-    <div id="shopify-section-header" class="shopify-section shopify-section__header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img class="header__logo-image" src="./Create Account – LG Foods_files/LG_Logo_60x.png" srcset="//cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo_60x.png?v=1563865730 1x, //cdn.shopify.com/s/files/1/0054/9568/5193/files/LG_Logo_60x@2x.png?v=1563865730 2x" alt="LG Foods">
-          <!-- social media links -->
 
-        </a>
-        <a href="#" class="navbar-toggler " data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <svg class="icon icon-hamburger">
-            <use xlink:href="#icon-hamburger">
 
-            </use>
-          </svg>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Cooking Tips
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://leongguan.com/pages/cooking-tips-fresh-pasta">Fresh Pasta</a>
-                <a class="dropdown-item" href="https://leongguan.com/pages/cooking-tips-fresh-noodles">Noodle</a>
-                <a class="dropdown-item" href="https://leongguan.com/pages/cooking-tips-beancurd-products">Bean Products</a>
-                <a class="dropdown-item" href="https://leongguan.com/blogs/cooking-tips/cooking-tips-wanton-dumpling-skin">Dumpling Skin</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Retail Products
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://leongguan.com/collections/pasta">Fresh Pasta</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections/wholegrain-noodle">Wholegrain Products</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections/noodle">Noodles</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections/skins">Wanton Wrappers</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections/lg-beancurd">Bean Curd Products</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Foodservice Products
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://leongguan.com/collections/tofu">Bean Curd Products</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections/frozen">Frozen</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections/fishballs-and-fishcakes">Fishball & Fishcakes</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections/healthier-choice">Healthier Choice Products</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections">Noodles</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Cooked Noodles</a>
-                  <a class="dropdown-item" href="#">Dry Noodles</a>
-                  <a class="dropdown-item" href="#">Uncooked Noodles</a>
-                </div>
-                <a class="dropdown-item" href="https://leongguan.com/collections/pasta">Pasta</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections/vegetarian-1">Vegetarian</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections/wanton-dumpling-wrappers">Wanton/Dumpling wrappers</a>
-                <a class="dropdown-item" href="https://leongguan.com/collections/other-products">Other products</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Shop
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://shopee.sg/lgfoods">Shop Online</a>
-                <a class="dropdown-item" href="https://leongguan.com/pages/retail">Retail location</a>
-
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                About
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://leongguan.com/pages/about-us">Our Company</a>
-                <a class="dropdown-item" href="https://leongguan.com/pages/vision-mission">Our Mission</a>
-                <a class="dropdown-item" href="https://leongguan.com/pages/csr">CSR</a>
-
-              </div>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="https://leongguan.com/blogs/news">Blog </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Contact
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://leongguan.com/pages/contact-us">Contact</a>
-                <a class="dropdown-item" href="https://leongguan.com/pages/order-enquiry">Enquiry</a>
-
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Food Recepies
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/food/meesoto">Mee Soto</a>
-                <a class="dropdown-item" href="/food/meegoreng">Mee Goreng</a>
-                <a class="dropdown-item" href="/food/currychicken">Curry Chicken</a>
-                <a class="dropdown-item" href="/food/hokkienmee">Hokkienmee</a>
-                <a class="dropdown-item" href="/food/hokkienmeefriednoodle">Hokkien Mee Fried Noodle</a>
-
-              </div>
-            </li>
-          </ul>
-
-          <ul class="ml-auto navbar-nav">
-            
-          @if (Route::has('login'))
-                    @auth
-                       <li class="nav-item"><a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline"></a></li>
-                       <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                    @else
-                    <li class="nav-item"><a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a></li>
-
-                        @if (Route::has('register'))
-                        <li class="nav-item"><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a></li>
-                        @endif
-                    @endif
-            @endif
-          </ul>
-        </div>
-      </nav>
-      <p id="live_updates"></p>
-      
-      <style>
-        .header__logo-image {
-          max-width: 60px;
-        }
-      </style>
-
-</div>
-
-<main id="main" class="main" role="main">
-  <div class="d-flex justify-content-center alert-warning">
-      <p>This is not a genuine website, DO NOT KEY IN YOUR REAL CREDENTIALS!</p>
-  </div>
+    <main id="main" class="main" role="main">
+      <div class="d-flex justify-content-center alert-warning">
+        <p>This is not a genuine website, DO NOT KEY IN YOUR REAL CREDENTIALS!</p>
+      </div>
 
 
 
@@ -461,139 +321,7 @@
 
     </main>
 
-    <div id="shopify-section-newsletter" class="shopify-section shopify-section__newsletter">
-
-    </div>
-    <div id="shopify-section-footer" class="shopify-section shopify-section__footer">
-      <footer class="footer" role="contentinfo">
-        <div class="inner">
-          <div class="footer__wrapper">
-
-
-
-
-
-            <section class="footer__module footer__links">
-              <h3 class="footer__title">Footer menu</h3>
-
-              <ul class="footer__linklist">
-
-                <li class="footer__linklist-item">
-                  <a href="https://leongguan.com/search" class="footer__linklist-link">Search</a>
-                </li>
-
-                <li class="footer__linklist-item">
-                  <a href="https://leongguan.com/pages/vision-mission" class="footer__linklist-link">Vision &amp; Mission</a>
-                </li>
-
-              </ul>
-            </section>
-
-
-
-
-
-            <section class="footer__module footer__contact">
-              <h3 class="footer__title">Contact Us</h3>
-
-
-              <p class="footer__phone">7 Woodlands Link, Singapore 738722</p>
-
-
-
-              <p class="footer__email">
-                <a href="mailto:enquiry@leong-guan.com%20/%20+65%206754%207911">enquiry@leong-guan.com / +65 6754 7911</a>
-              </p>
-
-            </section>
-
-
-
-
-
-
-
-            <section class="footer__module footer__social">
-              <h3 class="footer__title">Follow Us</h3>
-
-
-
-
-              <ul class="social-media social-media--vertical">
-
-
-                <li class="social-media__item">
-                  <a href="https://www.facebook.com/leong.guan.food" target="_blank"><svg class="icon icon-facebook">
-                      <use xlink:href="#icon-facebook">
-
-                        <title>Facebook</title>
-
-                      </use>
-                    </svg>Facebook</a>
-                </li>
-
-
-
-
-
-
-
-
-
-                <li class="social-media__item">
-                  <a href="https://www.youtube.com/channel/UCVleaphU5GsdQotnpFbPz_w" target="_blank"><svg class="icon icon-youtube">
-                      <use xlink:href="#icon-youtube">
-
-                        <title>YouTube</title>
-
-                      </use>
-                    </svg>YouTube</a>
-                </li>
-
-
-
-
-
-
-
-
-
-
-              </ul>
-
-
-            </section>
-
-
-
-
-          </div>
-        </div>
-
-        <div class="footer__misc">
-          <div class="inner">
-            <p class="footer__copyright">
-
-              © <a href="https://leongguan.com/">LG Foods</a>
-            </p>
-
-
-          </div>
-        </div>
-      </footer>
-
-
-      <a href="https://leongguan.com/account/register#" class="back-to-top" title="Back to the top">
-        <svg class="icon icon-back-to-top-arrow">
-          <use xlink:href="#icon-back-to-top-arrow">
-
-          </use>
-        </svg>
-      </a>
-
-
-    </div>
-  </div>
+    
 
 
   <script src="{{asset('js/jquery.min.js.download')}}" type="text/javascript"></script>

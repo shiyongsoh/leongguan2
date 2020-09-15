@@ -1598,10 +1598,10 @@
 
 @yield('content')
 {{ $slot ?? '' }}
-<div class="page__footer">
+<!-- <div class="page__footer">
 
   <a href="{{ url('/redirect') }}" class="button button--secondary">Login With Google <i class="fa fa-google"></i></a>
-</div>
+</div> -->
 
       </main>
 

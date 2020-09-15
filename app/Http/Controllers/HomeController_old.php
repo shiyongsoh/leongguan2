@@ -47,26 +47,16 @@ class HomeController extends Controller
         if($user->role =='kiosk'){
             $kioskCode = kioskCode::where('kiosk_userid',$user->id)->latest()->first();
         }
-        else{
+        // else{
 
-            $kioskCode = kioskCode::where('userid',$user->id)->latest()->first();
-        }
-        // dd(Auth::User()->role !== 'kiosk');
-        // dd(empty($kioskCode->active));
-        if(!$kioskCode){
-            if(Auth::User()->role != 'kiosk'){
-                return redirect()->action([kioskCodeController::class, 'giveKioskCode']);
-            }
-            else{
-
-                $products = orderedItems::select("*")
-                ->join('products','products.id','=','ordered_items.productID')
-                ->join('users','users.id','=','ordered_items.userid')
-                ->where('ordered_items.userid',$user->id)
-                ->where('status',null)->get();
-                return view("redeem")->with('products',$products);
-            }
-        }
+        //     $kioskCode = kioskCode::where('userid',$user->id)->latest()->first();
+        // }
+        // if($kioskCode == null && $user->role != 'kiosk'){
+        //         return redirect()->action([kioskCodeController::class, 'giveKioskCode']);                
+        // }
+        // else if(empty($kioskCode->kiosk_userid && $user->role != 'kiosk')){
+        //     return redirect()->action([kioskCodeController::class, 'giveKioskCode']);
+        // }
         else{
 
             $products = orderedItems::select("*")
@@ -118,14 +108,6 @@ class HomeController extends Controller
         return redirect()->action([HomeController::class, 'redeem']);
 
     }
-
-
-    public function kioskWelcome(){
-        return view('kioskWelcome');
-    }
-
-
-
     public function showProfile($id)
     {
         $user = Redis::get('name'.$id);

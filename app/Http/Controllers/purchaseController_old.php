@@ -52,44 +52,37 @@ class purchaseController extends Controller
         $redis = Redis::connection();
         Redis::set('name', $request);
         broadcast(new purchaseMade($products));
-
-        return view('redeem')->with('products',$products);
+        if($user->role == 'kiosk'){
+            return view('kioskOrder')->with('products',$products);
+        }
+        else{
+            return view('redeem')->with('products',$products);
+        }
         // event(new puchaseMade(Auth::user()->firstname, $actionData));
     }
     public function pay(){
         $user = Auth::User();
-        
         $products = orderedItems::select("*")
         ->join('products','products.id','=','ordered_items.productID')
         ->join('users','users.id','=','ordered_items.userid')
         ->where('ordered_items.userid',$user->id)
         ->where('status',null)->get();
-        if($user->role !='kiosk'){
-            $kioskCode = kioskCode::where('userid',$user->id)->latest()->first();
-            if(!$kioskCode){
-                
-                return redirect()->action([kioskCodeController::class, 'giveKioskCode']);
-            }
-        }
-        else if($products->first() !==null){
+        if($products->first() !==null){
                     $products = orderedItems::select("*")
                     ->join('products','products.id','=','ordered_items.productID')
                     ->join('users','users.id','=','ordered_items.userid')
                     ->where('ordered_items.userid',$user->id)
                     ->where('status',null)->update(['status'=>'paid']);
-                    $kioskCode = kioskCode::where('userid',$user->id)->latest()->first();
-                    $kioskCode->delete();
+                    $kioskCode = kioskCode::where('userid',$user->id)->get();
+                    // $kioskCode->delete();
                     // dd($kioskCode);
             return view('finalise')->with('paid','You have finalised your payment');
         }
         else{
             
-            return view('redeem')->with('paid','You have not ordered anything yet');
+            return view('finalise')->with('paid','You have not ordered anything yet');
         }
         // dd($products);
-    }
-    public function finalisePayment(){
-        return view('paymentMode');
     }
     public function listPurchase(Request $request){
         $user = Auth::User();
