@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/common-store.css') }}">
     <link rel="stylesheet" href="{{ asset('css/theme.scss.css') }}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="canonical" href="https://leongguan.com/account/register">
 
     
@@ -52,6 +52,13 @@
   #dynamic-checkout-cart {
     min-height: 50px;
   }
+  .fa-google {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
 }
 
 @media screen and (max-width: 750px) {
@@ -1591,6 +1598,10 @@
 
 @yield('content')
 {{ $slot ?? '' }}
+<div class="page__footer">
+
+  <a href="{{ url('/redirect') }}" class="button button--secondary">Login With Google <i class="fa fa-google"></i></a>
+</div>
 
       </main>
 

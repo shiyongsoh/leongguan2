@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\purchaseController;
 use App\Http\Controllers\kioskCodeController;
+use App\Http\Controllers\SocialAuthGoogleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,11 @@ Route::post('/receiveCode/{id}',[kioskCodeController::class,'receiveCode']);
 
 //survey
 Route::post('/survey',[HomeController::class,'getSurvey']);
+
+//google
+Route::get('/redirect', [SocialAuthGoogleController::class,'redirect']);
+Route::get('/callback', [SocialAuthGoogleController::class,'callback']);
+
 //test
 Route::get('/redisTest',[HomeController::class,'redis_test']);
 

@@ -24,6 +24,7 @@
           <button type="submit" class="button button--primary">Login</button>
         </div>
       </form>
+      
       <footer class="page__footer">
   <h4 class="page__footer-text">Not a member yet?</h4>
   <a href="/register" class="button button--secondary">Register now</a>
