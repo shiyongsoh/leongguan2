@@ -55,15 +55,15 @@ class AdminController extends Controller
             return redirect('dashboard');
         }
 
-        $addProduct = new products();
-        if($request->name == null|| $request->price ==null){
+        // dd($request);
+        if($request->input('productName') == null|| $request->input('price') ==null){
             return view('addProduct')->with('error',"Key in something");
         }
         else if(!is_numeric($request->input('price'))){
             return view('addProduct')->with('error',"must be a number");
         }
-        // dd($request);
-        $addProduct->productName = $request->input('name');
+        $addProduct = new products();
+        $addProduct->productName = $request->input('productName');
         $addProduct->price = $request->input('price');
         $addProduct->save();
 

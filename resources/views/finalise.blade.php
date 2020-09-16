@@ -12,4 +12,10 @@
     </div>
 
 </div>
+<script>
+         setTimeout(function(){
+            window.location.href = '/kioskwelcome';
+         }, 5000);
+      </script>
+
 @endsection

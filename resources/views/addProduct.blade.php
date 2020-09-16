@@ -12,7 +12,7 @@
                 </div>
                 
             </div>
-            <form action="/addProduct" method="POST" enctype="multipart/form-data">
+            <form action="/addProduct" method="POST">
                 @csrf
                 <div class="form__control ">
                     <label class="form__label" for="name">Product name</label>

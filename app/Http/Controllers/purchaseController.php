@@ -78,7 +78,10 @@ class purchaseController extends Controller
                     ->where('ordered_items.userid',$user->id)
                     ->where('status',null)->update(['status'=>'paid']);
                     $kioskCode = kioskCode::where('userid',$user->id)->latest()->first();
-                    $kioskCode->delete();
+                    if(!empty($kioskCode)){
+
+                        $kioskCode->delete();
+                    }
                     // dd($kioskCode);
             return view('finalise')->with('paid','You have finalised your payment');
         }

@@ -77,7 +77,7 @@ Route::get('/redirect', [SocialAuthGoogleController::class,'redirect']);
 Route::get('/callback', [SocialAuthGoogleController::class,'callback']);
 
 //kiosk welcome
-Route::get('/kioskWelcome', [HomeController::class,'kioskWelcome']);
+Route::get('/kioskwelcome', [HomeController::class,'kioskWelcome']);
 
 //test
 Route::get('/redisTest',[HomeController::class,'redis_test']);
