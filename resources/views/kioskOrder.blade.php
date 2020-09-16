@@ -2,13 +2,32 @@
 @section('content')
 
 <div class="container">
-  <div class="row justify-content-center">
+<div class="row justify-content-center">
+    
     <div class="col-md-8">
-    @if(!empty($products))
+      @if(!empty($products))
+      <table class="table live_updates">
+        <thead>
+          <th scope="col">Product Name</th>
+          <th scope="col">amount</th>
+          <th scope="col">SubTotal/Total</th>
+        </thead>
+        <span id='tableData'>
+        @foreach($products as $product)
+        <tr>
+
+          <td>{{ $product->productName }}</td>
+          <td class="{{$product->id}}">{{ $product->amount }}</td>
+          <td class="{{$product->id}}">{{$product->amount * $product->price}}</td>
+        </tr>
+        @endforeach
+        </span>
+      </table>
+      @endif
+
+      @if(!empty($products))
       <a href="/finalise" class="button button--secondary">Finalise payment</a>
       @endif
-      
-      
       <div class="card">
         <div class="card-header">Hi {{ Auth::user()->firstname }}</div>
 
@@ -18,8 +37,8 @@
           <p> {{$debug ?? ''}}</p>
           <!-- <h3>You have:</h3> -->
 
+          {{$message}}
         </div>
-
 
       </div>
 
@@ -148,4 +167,29 @@
     </div>
   </div>
 </div>
+<script>
+  Echo.channel('leongguan')
+    .listen('.purchaseMade', (data) => {
+  var tableData = document.getElementById('tableData');
+  console.log(tableData);
+  var name, amount, subtotal;
+
+  // for (var resetData = 0; resetData < tableData.length; resetData++) {
+  //   tableData.removeChild();
+  // }
+  
+      for (var i in data) {
+        name = document.createElement("td");
+        name.innerHTML = i.name
+        tableData.appendChild(name);
+        amount = document.createElement("td");
+        amount.innerHTML(i.amount)
+        tableData.appendChild(amount);
+        subtotal = document.createElement("td");
+        subtotal.innerHTML = i.amount * i.price
+        tableData.appendChild(subtotal);
+
+      }
+    });
+</script>
 @endsection

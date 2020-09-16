@@ -6,7 +6,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\purchaseController;
 use App\Http\Controllers\kioskCodeController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\SocialAuthGoogleController;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +56,7 @@ Route::get('/addProduct', [AdminController::class,'addProductPage']);
 Route::post('/addProduct', [AdminController::class,'addProduct']);
 Route::get('/dashboard', [HomeController::class, 'index']);
 Route::get('/kiosk/{id}', [kioskCodeController::class, 'checkForKioskCode']);
-Route::get('/redeem', [HomeController::class, 'redeem']);
+// Route::get('/redeem', [HomeController::class, 'redeem']);
 Route::get('/food/{id}', [HomeController::class, 'kiosk']);
 Route::get('/admin', [AdminController::class, 'listFood']);
 Route::post('/buy', [purchaseController::class, 'purchase']);
@@ -67,7 +69,7 @@ Route::post('/admin', [AdminController::class, 'insertFood']);
 
 //kioskCode
 Route::get('/givekioskcode',[kioskCodeController::class,'giveKioskCode']);
-Route::post('/receiveCode/{id}',[kioskCodeController::class,'receiveCode']);
+
 
 //survey
 Route::post('/survey',[HomeController::class,'getSurvey']);
@@ -79,6 +81,11 @@ Route::get('/callback', [SocialAuthGoogleController::class,'callback']);
 //kiosk welcome
 Route::get('/kioskwelcome', [HomeController::class,'kioskWelcome']);
 
+
+//send redeem mail
+Route::get('/redeem',[MailController::class,'getEmail']);
+Route::post('/send/email', [MailController::class, 'sendRedeemMail']);
+Route::post('/receiveCode/{id}',[MailController::class,'receiveCode']);
 //test
 Route::get('/redisTest',[HomeController::class,'redis_test']);
 

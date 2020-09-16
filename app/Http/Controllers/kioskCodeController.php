@@ -16,13 +16,19 @@ class kioskCodeController extends Controller
         
     }
     public function giveKioskCode(){
-        $kioskCode = mt_rand(100000, 999999);
-        $user = Auth::User();
-        $saveCode = new kioskCode();
-        $saveCode->userid = $user->id;
-        $saveCode->kioskCode = $kioskCode;
-        $saveCode->save();
-        return view('giveKioskCode')->with('kioskCode',$kioskCode);
+        if(Auth::User()->role != 'kiosk'){
+
+            $kioskCode = mt_rand(100000, 999999);
+            $user = Auth::User();
+            $saveCode = new kioskCode();
+            $saveCode->userid = $user->id;
+            $saveCode->kioskCode = $kioskCode;
+            $saveCode->save();
+            return view('giveKioskCode')->with('kioskCode',$kioskCode);
+        }
+        else{
+            return redirect()->action([kioskCodeController::class, 'receiveCode'],['1234']);
+        }
     }
     public function receiveCode(Request $request,$id){
         $user = Auth::User();

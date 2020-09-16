@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\redeem;
 use App\Models\orderedItems;
+
+use App\Mail\RedeemTrialPack;
+
 use Socialite;
 use Auth;
 use App\Events\puchaseMade;
@@ -77,36 +80,40 @@ class HomeController extends Controller
             return view("redeem")->with('products',$products);
         }
     }
-    public function redeem(){
-        //check if you have redeemed
-        $user = Auth::User();
-        $products = orderedItems::select("*")
-        ->join('products','products.id','=','ordered_items.id')
-        ->where('ordered_items.userid',Auth::id())->get();
-        $cart = orderedItems::where("userid",Auth::User()->id)->get();
-        // $checkRedeem = redeem::where("userid",$user->id)->first();
-        // dd($checkRedeem);
-        if(redeem::where("userid",$user->id)->exists()){
-            $redeemStatus="you have already redeemed the trial pack";
-            
-            return view("redeem")->with('redeemStatus',$redeemStatus)->with('cart',$cart)->with('products',$products);
-        }
-        else{
-            //check if you have done the survey
-            $user = Auth::User();
-            // dd($user);
-            if($user->gender == null ||$user->age == null ||$user->newsletter == null ||$user->favoriteFood == null){
-                return view('survey');
-            }
-            $redeem = new redeem;
-            $redeem->userid = $user->id;
-            $redeem->redeem = "yes";
-            $redeem->save();
-
-            $redeemStatus="You have successfully reedemed your trial pack";
-            return view("redeem")->with('redeemStatus',$redeemStatus);
-        }
+    public function showSurvey(){
+        return view('survey');
     }
+    // public function redeem(){
+    //     //check if you have redeemed
+    //     $user = Auth::User();
+    //     $products = orderedItems::select("*")
+    //     ->join('products','products.id','=','ordered_items.id')
+    //     ->where('ordered_items.userid',Auth::id())->get();
+    //     $cart = orderedItems::where("userid",Auth::User()->id)->get();
+    //     // $checkRedeem = redeem::where("userid",$user->id)->first();
+    //     // dd($checkRedeem);
+    //     if(redeem::where("userid",$user->id)->exists()){
+    //         $redeemStatus="you have already redeemed the trial pack";
+            
+    //         return view("redeem")->with('redeemStatus',$redeemStatus)->with('cart',$cart)->with('products',$products);
+    //     }
+    //     else{
+    //         //check if you have done the survey
+    //         $user = Auth::User();
+    //         // dd($user);
+    //         if($user->gender == null ||$user->age == null ||$user->newsletter == null ||$user->favoriteFood == null){
+    //             return view('survey');
+    //         }
+    //         $redeem = new redeem;
+    //         $redeem->userid = $user->id;
+    //         $redeem->redeem = "yes";
+    //         $redeem->save();
+
+    //         $redeemStatus="You have successfully reedemed your trial pack";
+    //         return view("redeem")->with('redeemStatus',$redeemStatus);
+    //     }
+    // }
+    
     public function getSurvey(Request $request){
         // dd($request);
         $survey = User::find(Auth::id());
@@ -115,7 +122,7 @@ class HomeController extends Controller
         $survey->favoriteFood = $request->input('favoriteFood');
         $survey->newsletter = $request->input('newsletter');
         $survey->save();
-        return redirect()->action([HomeController::class, 'redeem']);
+        return view('redeem')->with('message','You have successfully redeem it!');
 
     }
 

@@ -1,7 +1,7 @@
 @extends('layouts.kiosk')
 @section('content')
 <div class="container">
-<a href='/dashboard' style="text-decoration: none;">
+<a href='/food/1234' style="text-decoration: none;">
 <div class="row">
   <div class="col">
 
@@ -21,4 +21,6 @@
 </div>
 </a>
 </div>
+
+
 @endsection

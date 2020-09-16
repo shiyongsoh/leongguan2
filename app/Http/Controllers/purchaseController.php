@@ -1,40 +1,40 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\orderedItems;
 use App\Models\kioskCode;
 use App\Models\products;
 use Auth;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redis;//for port programming
+use Illuminate\Support\Facades\Redis; //for port programming
 use App\Events\purchaseMade;
+
 class purchaseController extends Controller
 {
     public function __construct()
     {
         // $this->middleware('auth');//commented to enable mail authentication
         $this->middleware(['auth', 'verified']);
-
-        
     }
-    public function purchase(Request $request){
+    public function purchase(Request $request)
+    {
         // $redis = Redis::connection();
-        
+
         // Redis::set('name', $request->input('amount'));
         $user = Auth::User();
-        $cart = orderedItems::where("userid",$user->id)->where('productID',$request->input('productID'))->where("status",null)->exists();
+        $cart = orderedItems::where("userid", $user->id)->where('productID', $request->input('productID'))->where("status", null)->exists();
         // dd($cart);
-        if($cart){
+        if ($cart) {
             // dd($request);
             // $cart = orderedItems::where("userid",$user->id)->where('productID',$request->input('productID'))->first();
-            $cart = orderedItems::where("userid",$user->id)->where('productID',$request->input('productID'))->where("status",null)->first();
+            $cart = orderedItems::where("userid", $user->id)->where('productID', $request->input('productID'))->where("status", null)->first();
             // dd($cart);
             $cart->amount = $request->input('amount');
             // $cart->productID = $request->input('productID');
             $cart->save();
-        }
-        else{
-            
+        } else {
+
             $cart = new orderedItems;
             $cart->userid = $user->id;
             $cart->productID = $request->input('productID');
@@ -42,61 +42,83 @@ class purchaseController extends Controller
             $cart->save();
         }
         //send connection
-        
+
         $products = orderedItems::select("*")
-        ->join('products','products.id','=','ordered_items.productID')
-        ->join('users','users.id','=','ordered_items.userid')
-        ->where('ordered_items.userid',$user->id)
-        ->where('status',null)->get();
+            ->join('products', 'products.id', '=', 'ordered_items.productID')
+            ->join('users', 'users.id', '=', 'ordered_items.userid')
+            ->where('ordered_items.userid', $user->id)
+            ->where('status', null)->get();
 
         $redis = Redis::connection();
         Redis::set('name', $request);
         broadcast(new purchaseMade($products));
 
-        return view('redeem')->with('products',$products);
+        return view('redeem')->with('products', $products);
         // event(new puchaseMade(Auth::user()->firstname, $actionData));
     }
-    public function pay(){
+    public function pay()
+    {
         $user = Auth::User();
-        
-        $products = orderedItems::select("*")
-        ->join('products','products.id','=','ordered_items.productID')
-        ->join('users','users.id','=','ordered_items.userid')
-        ->where('ordered_items.userid',$user->id)
-        ->where('status',null)->get();
-        if($user->role !='kiosk'){
-            $kioskCode = kioskCode::where('userid',$user->id)->latest()->first();
-            if(!$kioskCode){
-                
-                return redirect()->action([kioskCodeController::class, 'giveKioskCode']);
-            }
-        }
-        else if($products->first() !==null){
-                    $products = orderedItems::select("*")
-                    ->join('products','products.id','=','ordered_items.productID')
-                    ->join('users','users.id','=','ordered_items.userid')
-                    ->where('ordered_items.userid',$user->id)
-                    ->where('status',null)->update(['status'=>'paid']);
-                    $kioskCode = kioskCode::where('userid',$user->id)->latest()->first();
-                    if(!empty($kioskCode)){
 
-                        $kioskCode->delete();
-                    }
-                    // dd($kioskCode);
-            return view('finalise')->with('paid','You have finalised your payment');
-        }
-        else{
-            
-            return view('redeem')->with('paid','You have not ordered anything yet');
+        $products = orderedItems::select("*")
+            ->join('products', 'products.id', '=', 'ordered_items.productID')
+            ->join('users', 'users.id', '=', 'ordered_items.userid')
+            ->where('ordered_items.userid', $user->id)
+            ->where('status', null)->get();
+        if ($user->role != 'kiosk') {
+            $kioskCode = kioskCode::where('userid', $user->id)->latest()->first();
+            if (!$kioskCode) {
+
+                return redirect()->action([kioskCodeController::class, 'giveKioskCode']);
+            } 
+            //if its user
+            else if ($products->first() !== null) {
+                $products = orderedItems::select("*")
+                    ->join('products', 'products.id', '=', 'ordered_items.productID')
+                    ->join('users', 'users.id', '=', 'ordered_items.userid')
+                    ->join('kiosk_codes','kiosk_codes.userid','=','users.id')
+                    ->where('ordered_items.userid', $user->id)
+                    ->where('status', null)->update(['status' => 'paid']);
+                $kioskCode = kioskCode::where('userid', $user->id)->latest()->first();
+                if (!empty($kioskCode)) {
+
+                    $kioskCode->delete();
+                }
+                // dd($kioskCode);
+                
+                return view('finalise')->with('paid', $paid);
+            }
+            else{
+                
+                return view('finalise')->with('paid', paid);
+            }
+        } else if ($products->first() !== null) {
+            $products = orderedItems::select("*")
+                ->join('products', 'products.id', '=', 'ordered_items.productID')
+                ->join('users', 'users.id', '=', 'ordered_items.userid')
+                ->where('ordered_items.userid', $user->id)
+                // ->where('status', null)->update(['status' => 'paid']);
+                ->where('status', null)->delete();//this was used as the database can only hold 20 or so entries on the developmment server
+            $kioskCode = kioskCode::where('userid', $user->id)->latest()->first();
+            if (!empty($kioskCode)) {
+
+                $kioskCode->delete();
+            }
+            return view('finalise')->with('paid', 'You have finalised your payment');
+        } else {
+
+            return view('redeem')->with('paid', 'You have not ordered anything yet');
         }
         // dd($products);
     }
-    public function finalisePayment(){
+    public function finalisePayment()
+    {
         return view('paymentMode');
     }
-    public function listPurchase(Request $request){
+    public function listPurchase(Request $request)
+    {
         $user = Auth::User();
-        
+
         // event(new puchaseMade(Auth::user()->firstname, $actionData));
     }
 }

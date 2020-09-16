@@ -1,8 +1,4 @@
-@if(Auth::User()->role == 'kiosk')
-    @extends('layouts.kiosk')
-@else
-    @extends('layouts.kiosk')
-@endif
+@extends(Auth::user()->role =='kiosk' ? 'layouts.kiosk' : 'layouts.app');
 @section('content')
 <div class="">
     <div class="card">
@@ -12,10 +8,18 @@
     </div>
 
 </div>
+@if(Auth::User()->role == 'kiosk')
 <script>
-         setTimeout(function(){
-            window.location.href = '/kioskwelcome';
-         }, 5000);
-      </script>
+    setTimeout(function() {
+        window.location.href = '/kioskwelcome';
+    }, 5000);
+</script>
+@else
+<script>
+    setTimeout(function() {
+        window.location.href = '/dashboard';
+    }, 5000);
+@endif
+</script>
 
 @endsection
