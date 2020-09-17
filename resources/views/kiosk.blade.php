@@ -35,9 +35,5 @@
     </div>
 </div>
 
-<script>
-    setTimeout(function() {
-        window.location.href = '/kioskwelcome';
-    }, 30000);
-</script>
+
 @endsection

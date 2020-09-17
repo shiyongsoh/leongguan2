@@ -6,8 +6,10 @@
   <div class="col">
 
     <div class="container">
-    
-      <img src='{{asset("storage/img/kiosk/LG_logo.svg")}}'>
+    <iframe width="800" height="600" src="https://www.youtube.com/embed/QJ7VhfgpF4I?autoplay=1&loop=1&mute=1&controls=0">
+</iframe>
+<!-- <iframe width="759" height="506" src="https://www.youtube.com/embed/vQhqikWnQCU?&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!-- <img src='{{--asset("storage/img/kiosk/LG_logo.svg")--}}'> -->
     </div>
   </div>
   <div class="col my-auto">

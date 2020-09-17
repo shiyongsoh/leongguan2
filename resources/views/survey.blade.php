@@ -3,10 +3,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-        Hi {{ Auth::user()->firstname }}
-
-        </div>
+        
         <h4>We would like to hear from you!</h4>
         <form action="/survey" method="POST">
             @csrf

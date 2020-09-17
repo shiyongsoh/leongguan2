@@ -64,7 +64,7 @@
     <div class="row container-fluid">
       <div class="col-md-3 my-5">
         <div class="card">
-          <img class="card-img-top" src="{{asset('storage/img/meesoto/meesoto.jpg')}}" alt="Card image cap">
+          <img class="card-img-top" src="{{asset('storage/img/kiosk2/trialyellownoodles.png')}}" alt="Card image cap">
           <div class="card-body">
             <p class="h3">Trial Pack Yellow Noodles</p>
             <p>Find Mee, eat free!</p>
@@ -75,7 +75,7 @@
       </div>
       <div class="col-md-3 my-5">
         <div class="card">
-          <img class="card-img-top" src="{{asset('storage/img/meesoto/meesoto.jpg')}}" alt="Card image cap">
+          <img class="card-img-top" src="{{asset('storage/img/kiosk2/trialkwayteow.png')}}" alt="Card image cap">
           <div class="card-body">
             <p class="h3">Trial Pack Kway Teow</p>
             <p>Taste some Kway Teow.</p>
@@ -87,7 +87,7 @@
       </div>
       <div class="col-md-3 my-5">
         <div class="card">
-          <img class="card-img-top" src="{{asset('storage/img/meesoto/meesoto.jpg')}}" alt="Card image cap">
+          <img class="card-img-top" src="{{asset('storage/img/kiosk2/yellowNoodle.png')}}" alt="Card image cap">
           <div class="card-body">
             <p class="h3">Yellow Noodles </p>
             <p>Bigger than trial packs</p>
@@ -111,7 +111,7 @@
       <div class="row my-auto"> -->
       <div class="col-md-3 my-5">
         <div class="card">
-          <img class="card-img-top" src="{{asset('storage/img/meesoto/meesoto.jpg')}}" alt="Card image cap">
+          <img class="card-img-top" src="{{asset('storage/img/kiosk2/kwayteow.png')}}" alt="Card image cap">
           <div class="card-body">
             <p class="h3">Char Kway Teow </p>
             <p>Bigger than trial packs</p>
@@ -132,9 +132,9 @@
       </div>
       <div class="col-md-3 my-5">
         <div class="card">
-          <img class="card-img-top" src="{{asset('storage/img/meesoto/meesoto.jpg')}}" alt="Card image cap">
+          <img class="card-img-top" src="{{asset('storage/img/kiosk2/prawnNoodleKit.png')}}" alt="Card image cap">
           <div class="card-body">
-            <p class="h3">Yellow Noodle Kit</p>
+            <p class="h3">Prawn Noodle Kit</p>
             <p>Boil and go.</p>
             <p id='1'>Amount ordered {{$products[3]->amount ?? ''}}</p>
             <form method="POST" action="/buy">
@@ -154,7 +154,7 @@
       </div>
       <div class="col-md-3 my-5">
         <div class="card">
-          <img class="card-img-top" src="{{asset('storage/img/meesoto/meesoto.jpg')}}" alt="Card image cap">
+          <img class="card-img-top" src="{{asset('storage/img/kiosk2/kwayteowkit.png')}}" alt="Card image cap">
           <div class="card-body">
             <p class="h3">Char Kway Teow Kit</p>
             <p>Twice the serving, twice the happiness</p>
